@@ -5,7 +5,7 @@ export function Navbar() {
     <>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-          <Link to="/detalle" class="navbar-brand">Inicio</Link>
+          <Link to='/' class="navbar-brand">LOGO</Link>
           <button
             class="navbar-toggler"
             type="button"
@@ -17,58 +17,42 @@ export function Navbar() {
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
-                  Link
-                </a>
+              <Link to="/" class="nav-link">Inicio</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
-                  Link
-                </a>
+              <Link to="/" class="nav-link">Inicio</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
-                  Link
-                </a>
+              <Link to="/" class="nav-link">Inicio</Link>
               </li>
               <li class="nav-item dropdown">
-                <a
+                <Link
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  to="/"
                   role="button"
                   data-bs-toggle="dropdown"
                 >
-                  Dropdown
-                </a>
+                  Productos
+                </Link>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/">
                       Link
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/">
                       Another link
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/">
                       A third link
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
             </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="text"
-                placeholder="Search"
-              ></input>
-              <button class="btn btn-primary" type="button">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
