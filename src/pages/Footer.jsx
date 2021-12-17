@@ -1,5 +1,5 @@
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import {Link} from 'react-router-dom';
 export function Footer() {
   return (
     <>
@@ -14,16 +14,17 @@ export function Footer() {
               </p>
               <p class="small text-muted mb-0">
                 &copy; Copyrights. All rights reserved.{" "}
+
               </p>
             </div>
             <div class="col-lg-2 col-md-6">
               <h5 class="text-white mb-3">Quick links</h5>
               <ul class="list-unstyled text-muted">
                 <li>
-                  <Link to="/">Inicio</Link>
+                <Link to="/">Inicio</Link>
                 </li>
                 <li>
-                  <Link to="/">Inicio</Link>
+                <Link to="/">Inicio</Link>
                 </li>
                 <li>
                   <Link to="/">Inicio</Link>
@@ -38,9 +39,10 @@ export function Footer() {
               <ul class="list-unstyled text-muted">
                 <li>
                   <Link to="/detalle">Inicio</Link>
+
                 </li>
                 <li>
-                  <Link to="/">Inicio</Link>
+                 <Link to="/">Inicio</Link>
                 </li>
                 <li>
                   <Link to="/">Inicio</Link>
