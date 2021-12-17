@@ -9,8 +9,6 @@ const oneProduct = {
   stock: "1",
 };
 
-//////
-
 const getOneProduct = new Promise((resolve) => {
   setTimeout(() => {
     resolve(oneProduct);

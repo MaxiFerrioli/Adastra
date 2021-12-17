@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {getFetch} from "../helpers/getFetch"
+import { getFetch } from "../helpers/getFetch";
 import ItemList from "./ItemList";
 
 function ItemListContainer({ greeting }) {
@@ -16,7 +16,7 @@ function ItemListContainer({ greeting }) {
   return (
     <>
       {greeting}
-      {loading ? <h2>Cargando...</h2> : <ItemList productos={productos}/>}
+      {loading ? <h2>Cargando...</h2> : <ItemList productos={productos} />}
     </>
   );
 }
