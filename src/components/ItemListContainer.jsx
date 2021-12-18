@@ -16,7 +16,7 @@ function ItemListContainer({ greeting }) {
   return (
     <>
       {greeting}
-      {loading ? <h2>Cargando...</h2> : <ItemList productos={productos} />}
+      {loading ? <div class="spinner-border"></div> : <ItemList productos={productos} />}
     </>
   );
 }

@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer";
-import { Navbar } from "./pages/NavBar";
-import { Footer } from "./pages/Footer";
+import { Navbar } from "./components/NavBar";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             exact
             path="/"
             element={
-              <ItemListContainer greeting="hola soy ItemListContainer" />
+              <ItemListContainer />
             }
           />
           <Route

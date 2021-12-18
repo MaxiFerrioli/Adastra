@@ -5,7 +5,9 @@ export function Navbar() {
     <>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-          <Link to='/' class="navbar-brand">LOGO</Link>
+          <Link to="/" class="navbar-brand">
+            LOGO
+          </Link>
           <button
             class="navbar-toggler"
             type="button"
@@ -17,13 +19,19 @@ export function Navbar() {
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-              <Link to="/" class="nav-link">Inicio</Link>
+                <Link to="/" class="nav-link">
+                  Inicio
+                </Link>
               </li>
               <li class="nav-item">
-              <Link to="/" class="nav-link">Inicio</Link>
+                <Link to="/" class="nav-link">
+                  Inicio
+                </Link>
               </li>
               <li class="nav-item">
-              <Link to="/" class="nav-link">Inicio</Link>
+                <Link to="/" class="nav-link">
+                  Inicio
+                </Link>
               </li>
               <li class="nav-item dropdown">
                 <Link
@@ -51,6 +59,11 @@ export function Navbar() {
                     </Link>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <Link to="/" class="nav-link">
+                  <i class="fas fa-shopping-cart"></i>
+                </Link>
               </li>
             </ul>
           </div>

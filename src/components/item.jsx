@@ -3,7 +3,7 @@ import React from "react";
 export function Item({ prod }) {
   return (
     <>
-      <div key={prod.id} className="w-50">
+      <div key={prod.id} className="col-lg-10">
         <div className="card w-100 mt-5">
           <div className="card-header">
             {`${prod.name} - ${prod.categoria}`}
