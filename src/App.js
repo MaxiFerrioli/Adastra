@@ -12,13 +12,7 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <ItemListContainer />
-            }
-          />
+          <Route exact path="/" element={<ItemListContainer />} />
           <Route
             exact
             path="/detalle"
