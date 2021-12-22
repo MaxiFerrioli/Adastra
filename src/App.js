@@ -12,10 +12,10 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<ItemListContainer />} />
+          <Route exact path="/categoria/:idCate" element={<ItemListContainer />} />
           <Route
             exact
-            path="/detalle"
+            path="/"
             element={
               <ItemDetailContainer greeting="hola soy ItemDetailContainer" />
             }

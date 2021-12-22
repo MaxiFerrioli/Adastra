@@ -40,22 +40,27 @@ export function Navbar() {
                   role="button"
                   data-bs-toggle="dropdown"
                 >
-                  Productos
+                  Categorias
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/">
-                      Link
+                    <Link className="dropdown-item" to="/categoria/hoodies">
+                      Hoodies
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/">
-                      Another link
+                    <Link className="dropdown-item" to="/categoria/remeras">
+                      Remeras
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/">
-                      A third link
+                    <Link className="dropdown-item" to="/categoria/medias">
+                      Medias
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/categoria/accesorios">
+                      Accesorios
                     </Link>
                   </li>
                 </ul>
