@@ -1,12 +1,11 @@
-.display {
-    display: flex;
-    justify-content: center;
-}
-
 .centrar {
     text-align: center;
 }
 
 .widthFoto {
     width: 500px;
+}
+
+.btnDetail {
+    margin: 20px;
 }

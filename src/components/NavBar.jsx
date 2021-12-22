@@ -3,66 +3,66 @@ import "./NavBar.css";
 export function Navbar() {
   return (
     <>
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-        <div class="container-fluid">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <div className="container-fluid">
           <Link to="/" class="navbar-brand">
-            LOGO
+            Adastra
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#mynavbar"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="mynavbar">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <Link to="/" class="nav-link">
+          <div className="collapse navbar-collapse" id="mynavbar">
+            <ul className="navbar-nav me-auto">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
                   Inicio
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/" class="nav-link">
-                  Inicio
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  Cuenta
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/" class="nav-link">
-                  Inicio
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  Contacto
                 </Link>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <Link
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   to="/"
                   role="button"
                   data-bs-toggle="dropdown"
                 >
                   Productos
                 </Link>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
-                    <Link class="dropdown-item" to="/">
+                    <Link className="dropdown-item" to="/">
                       Link
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="/">
+                    <Link className="dropdown-item" to="/">
                       Another link
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="/">
+                    <Link className="dropdown-item" to="/">
                       A third link
                     </Link>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <Link to="/" class="nav-link">
-                  <i class="fas fa-shopping-cart"></i>
+              <li className="nav-item">
+                <Link to="/CartWidget" className="nav-link ">
+                  <i className="fas fa-shopping-cart"></i>
                 </Link>
               </li>
             </ul>
