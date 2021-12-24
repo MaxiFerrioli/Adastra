@@ -12,10 +12,19 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route exact path="/categoria/:idCate" element={<ItemListContainer />} />
           <Route
             exact
             path="/"
+            element={<ItemListContainer />}
+          />
+          <Route
+            exact
+            path="/categoria/:idCate"
+            element={<ItemListContainer />}
+          />
+          <Route
+            exact
+            path="/detalle/:id"
             element={
               <ItemDetailContainer greeting="hola soy ItemDetailContainer" />
             }
@@ -28,3 +37,4 @@ function App() {
 }
 
 export default App;
+

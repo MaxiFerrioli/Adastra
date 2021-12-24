@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 export function Item({ prod }) {
@@ -12,9 +12,11 @@ export function Item({ prod }) {
           </div>
           <p>{prod.price}</p>
           <div>
-            <button className="btn btn-outline-primary btn-block btnDetail">
-              detalle del producto
-            </button>
+            <Link to={`/detalle/${prod.id}`}>
+              <button className="btn btn-outline-primary btn-block btnDetail">
+                detalle del producto
+              </button>
+            </Link>
           </div>
         </div>
       </div>
