@@ -6,7 +6,7 @@ export function Item({ prod }) {
     <div className="">
       <div key={prod.id} className="centrar">
         <div>
-          <div>{`${prod.name} - ${prod.categoria}`}</div>
+          <div>{`${prod.title} - ${prod.categoria}`}</div>
           <div className="">
             <img src={prod.foto} alt="" className="widthFoto" />
           </div>

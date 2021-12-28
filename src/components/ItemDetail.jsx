@@ -5,7 +5,7 @@ const ItemDetail = ({ item }) => {
       <h3>ItemDetail</h3>
       <h3>{item.title}</h3>
       <p>{item.description}</p>
-      <img src={`${item.image}`} alt={`${item.image}`}></img>
+      <img src={`${item.foto}`} alt={`${item.foto}`}></img>
     </div>
   );
 };
