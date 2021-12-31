@@ -5,11 +5,12 @@ const productos = [
     categoria: "remeras",
     foto: "https://placedog.net/500/270",
     price: 122,
+    stock: 6,  
     description: "iosdiojasddsfdsfdsafsdfsdfsdfsdfsdfddsf",
   },
   {
     id: 2,
-    title: "sdf",
+    title: "sdasdsf",
     categoria: "hoodies",
     foto: "https://placedog.net/510/230",
     price: 122,

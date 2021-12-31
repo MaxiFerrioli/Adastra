@@ -1,53 +1,45 @@
-import { createContext, useState, useContext } from 'react'
+import { createContext, useState, useContext } from "react";
 
+const CartContext = createContext([]);
 
-const CartContext = createContext([]) 
+export const useCartContext = () => useContext(CartContext);
 
-export const useCartContext = () => useContext(CartContext)  
+function CartContextProvider({ children }) {
+  const [cartList, setCartList] = useState([]);
 
+  // function agregarAlCarrito(item) {
+  //     setCartList( [...cartList, item] )
+  // }
 
-function CartContextProvider({children}) {
-    const [cartList, setCartList] = useState([])
+  function agregarAlCarrito(item) {
+    const index = cartList.findIndex((i) => i.id === item.id); //pos    -1
 
-    // function agregarAlCarrito(item) {
-    //     setCartList( [...cartList, item] )    
-    // }
+    if (index > -1) {
+      const oldQy = cartList[index].cantidad;
 
+      cartList.splice(index, 1);
 
-
-    function agregarAlCarrito(item) {       
-
-        const index = cartList.findIndex(i => i.id === item.id)//pos    -1
-  
-          if (index > -1) {
-            const oldQy = cartList[index].cantidad
-  
-            cartList.splice(index, 1)
-
-            setCartList([...cartList, { ...item, cantidad: item.cantidad + oldQy}])
-
-          } else {
-            setCartList([...cartList, item])
-          }
-      }
-
-
-
-
-    function borrarCarrito() {
-        setCartList([])
+      setCartList([...cartList, { ...item, cantidad: item.cantidad + oldQy }]);
+    } else {
+      setCartList([...cartList, item]);
     }
-    
+  }
 
-    return (
-        <CartContext.Provider value={{
-            cartList,
-            agregarAlCarrito,
-            borrarCarrito
-        }}>
-            { children }
-        </CartContext.Provider>
-    )
+  function borrarCarrito() {
+    setCartList([]);
+  }
+
+  return (
+    <CartContext.Provider
+      value={{
+        cartList,
+        agregarAlCarrito,
+        borrarCarrito,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
 }
 
-export default CartContextProvider
+export default CartContextProvider;
