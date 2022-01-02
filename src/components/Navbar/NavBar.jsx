@@ -44,29 +44,29 @@ export function Navbar() {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/categoria/hoodies">
+                    <Link className="dropdown-item" to="/category/remeras">
                       Hoodies
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/categoria/remeras">
+                    <Link className="dropdown-item" to="/category/camisas">
                       Remeras
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/categoria/medias">
+                    <Link className="dropdown-item" to="/category/gorras">
                       Medias
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/categoria/accesorios">
+                    <Link className="dropdown-item" to="/category/rinoneras">
                       Accesorios
                     </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <Link to="/CartWidget" className="nav-link ">
+                <Link to="/Cart" className="nav-link ">
                   <i className="fas fa-shopping-cart"></i>
                 </Link>
               </li>
