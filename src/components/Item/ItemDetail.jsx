@@ -20,7 +20,7 @@ const ItemDetail = ({ item }) => {
         >
             <div>
                 <img
-                    width={400}
+                    width={600}
                     src={item.img}
                     alt="img"
                     style={{ margin: '10px' }}
