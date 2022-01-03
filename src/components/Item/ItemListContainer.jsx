@@ -13,7 +13,7 @@ const ItemListContainer = () => {
         const traerProductos = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(products);
-            }, 2000);
+            }, 0);
         });
         traerProductos
             .then((res) => {

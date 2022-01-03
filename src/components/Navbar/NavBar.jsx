@@ -24,19 +24,14 @@ export function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/" className="nav-link">
+                <Link to="/Cuenta" className="nav-link">
                   Cuenta
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  Contacto
                 </Link>
               </li>
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
-                  to="/"
+                  to=""
                   role="button"
                   data-bs-toggle="dropdown"
                 >

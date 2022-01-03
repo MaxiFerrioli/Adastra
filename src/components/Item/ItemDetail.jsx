@@ -35,7 +35,7 @@ const ItemDetail = ({ item }) => {
             {!goCart ? (
                 <Counter stock={item.stock} onAdd={onAdd} />
             ) : (
-                <Link to="/cart">Ir al carrito</Link>
+                <Link to="/Cart">Ir al carrito</Link>
             )}
         </div>
     );
