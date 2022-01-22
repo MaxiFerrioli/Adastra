@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { memo } from "react";
 import Item from "./Item";
 
 const ItemList = ({ items }) => {
@@ -17,7 +17,7 @@ const ItemList = ({ items }) => {
         ))}
       </div>
     </>
-  );
-};
+  )
+}
 
 export default ItemList;
