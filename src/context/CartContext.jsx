@@ -15,11 +15,11 @@ function CartContextProvider({ children }) {
     const index = cartList.findIndex((i) => i.id === item.id); //pos    -1
 
     if (index > -1) {
-      const oldQy = cartList[index].cantidad;
+      const oldQy = cartList[index].quantity;
 
       cartList.splice(index, 1);
 
-      setCartList([...cartList, { ...item, cantidad: item.cantidad + oldQy }]);
+      setCartList([...cartList, { ...item, quantity: item.quantity + oldQy }]);
     } else {
       setCartList([...cartList, item]);
     }
@@ -27,9 +27,7 @@ function CartContextProvider({ children }) {
 
   const precioTotal = () => {
     return cartList.reduce(
-      (acum, prod) => acum + prod.cantidad * prod.price,
-      0
-    );
+      (acum, prod) => acum + prod.quantity * prod.price, 0 );
   };
 
   const mostrarListado = () => {
