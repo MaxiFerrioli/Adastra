@@ -1,4 +1,3 @@
-import { memo } from "react";
 import Item from "./Item";
 
 const ItemList = ({ items }) => {

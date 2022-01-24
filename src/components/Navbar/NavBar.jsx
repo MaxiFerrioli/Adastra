@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
+import CartWidget from "./CartWidget";
+
 import "./NavBar.css";
-export function Navbar() {
+
+export const Navbar = () => {
+
   return (
     <>
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
@@ -61,8 +66,8 @@ export function Navbar() {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link to="/Cart" className="nav-link ">
-                  <i className="fas fa-shopping-cart"></i>
+                <Link to="/Cart">
+                  <CartWidget />
                 </Link>
               </li>
             </ul>
@@ -71,6 +76,6 @@ export function Navbar() {
       </nav>
     </>
   );
-}
+};
 
 export default Navbar;

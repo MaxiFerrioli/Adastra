@@ -1,18 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
-import ItemList from "./ItemList";
-import { traerProductos } from "./items";
+import {collection, getFirestore, getDocs, query, where} from "firebase/firestore";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import {
-  collection,
-  doc,
-  Firestore,
-  getDoc,
-  getFirestore,
-  getDocs,
-  query,
-  where,
-  limit,
-} from "firebase/firestore";
+import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
@@ -21,31 +10,17 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     const db = getFirestore();
-    const queryCollection = query(collection(db, "items"));
-    //, where('price','>', 0), limit (10)//
+    const queryCollection = id
+      ? query(collection(db, "items"), where("category", "==", id))
+      : query(collection(db, "items"));
+
     getDocs(queryCollection)
-      .then((resp) =>
-        setItems(resp.docs.map((item) => ({ id: item.id, ...item.data() })))
-      )
-      .catch((err) => console.log(err))
+      .then((resp) => setItems(resp.docs.map((item) => ({ id: item.id, ...item.data() }))))
+      .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [id]);
 
-  return <>{loading ? <h2>Cargando...</h2> : <ItemList items={items} />}</>;
+  return <>{loading ? <h2>Cargando...</h2> : <ItemList items={items}/>}</>;
 };
 
 export default ItemListContainer;
-
-// SIN FIREBASE
-// useEffect(() => {
-//   setLoading(true)
-//   traerProductos
-//     .then((res) => {
-//       const categorias = res.filter((i) => i.category === `${id}`);
-//       id === undefined ? setItems(res) : setItems(categorias);
-//       setLoading(false)
-//     })
-//     .catch((error) => {
-//         console.log(error);
-//       });
-//   }, [id]);

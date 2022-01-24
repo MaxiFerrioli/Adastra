@@ -1,54 +1,49 @@
 import { createContext, useState, useContext } from "react";
-
 const CartContext = createContext([]);
-
 export const useCartContext = () => useContext(CartContext);
 
 function CartContextProvider({ children }) {
   const [cartList, setCartList] = useState([]);
 
-  // function agregarAlCarrito(item) {
-  //     setCartList( [...cartList, item] )
-  // }
-
-  function agregarAlCarrito(item) {
-    const index = cartList.findIndex((i) => i.id === item.id); //pos    -1
+  function addToCart(item) {
+    const index = cartList.findIndex((i) => i.id === item.id);
 
     if (index > -1) {
       const oldQy = cartList[index].quantity;
-
       cartList.splice(index, 1);
-
       setCartList([...cartList, { ...item, quantity: item.quantity + oldQy }]);
-    } else {
-      setCartList([...cartList, item]);
-    }
+    } 
+    else { setCartList([...cartList, item]); }
   }
 
-  const precioTotal = () => {
-    return cartList.reduce(
-      (acum, prod) => acum + prod.quantity * prod.price, 0 );
+  const totalPrice = () => {
+    return cartList.reduce( (acum, prod) => acum + prod.quantity * prod.price, 0 );
   };
 
-  const mostrarListado = () => {
-    console.log(cartList);
-  };
-
-  const borrarItem = (id) => {
-    setCartList(cartList.filter((prod) => prod.id !== id));
-  };
-
-  function borrarCarrito() {
+  function deleteCart() {
     setCartList([]);
   }
+
+  const iconCart = () => {
+    return cartList.reduce( (acum, valor)=> acum + valor.quantity, 0) 
+}
+
+const deleteProd = (id) => {
+  // setCartList(cartList.filter((producto) => producto.id !== id));
+  const itemFiltrado = cartList.findIndex((prod) => prod.id === id);
+  cartList.splice(itemFiltrado, 1);
+  setCartList([...cartList]); 
+};
 
   return (
     <CartContext.Provider
       value={{
         cartList,
-        agregarAlCarrito,
-        borrarCarrito,
-        precioTotal,
+        addToCart,
+        deleteCart,
+        totalPrice,
+        iconCart,
+        deleteProd
       }}
     >
       {children}

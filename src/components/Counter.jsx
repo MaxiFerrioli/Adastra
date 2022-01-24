@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Counter = ({ stock, onAdd }) => {
   const [number, setNumber] = useState(1);
@@ -14,10 +14,10 @@ const Counter = ({ stock, onAdd }) => {
     <div style={{ width: "70%" }}>
       <p>{number}</p>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <button onClick={add} disabled={number === stock}>
-          +
-        </button>
+        <div>
         <button onClick={substract}>-</button>
+        <button onClick={add} disabled={number === stock}>+</button>
+        </div>
         <button disabled={number === 0} onClick={() => onAdd(number)}>
           Agregar al carrito
         </button>
