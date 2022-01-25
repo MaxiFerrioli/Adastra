@@ -20,30 +20,28 @@ function CartContextProvider({ children }) {
     return cartList.reduce( (acum, prod) => acum + prod.quantity * prod.price, 0 );
   };
 
-  function deleteCart() {
+  function clearCart() {
     setCartList([]);
   }
 
-  const iconCart = () => {
+  const deleteItemCart = (id) => {
+    setCartList(cartList.filter((producto) => producto.id !== id));
+  };
+
+  const cartCounter = () => {
     return cartList.reduce( (acum, valor)=> acum + valor.quantity, 0) 
 }
 
-const deleteProd = (id) => {
-  // setCartList(cartList.filter((producto) => producto.id !== id));
-  const itemFiltrado = cartList.findIndex((prod) => prod.id === id);
-  cartList.splice(itemFiltrado, 1);
-  setCartList([...cartList]); 
-};
 
   return (
     <CartContext.Provider
       value={{
         cartList,
         addToCart,
-        deleteCart,
+        clearCart,
         totalPrice,
-        iconCart,
-        deleteProd
+        cartCounter,
+        deleteItemCart
       }}
     >
       {children}

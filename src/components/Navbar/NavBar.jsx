@@ -1,17 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
-import CartWidget from "./CartWidget";
+import CartWidget from "../Cart/CartWidget";
+import logo from "../../img/logo.png";
 
-import "./NavBar.css";
+import "./Navbar.css";
 
 export const Navbar = () => {
-
   return (
     <>
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         <div className="container-fluid">
-          <Link to="/" class="navbar-brand">
-            Adastra
+          <Link to="/">
+            <img
+              src={logo}
+              width="55"
+              height="50"
+              className="d-inline-block mx-2"
+              alt="Logo"
+            />
           </Link>
           <button
             className="navbar-toggler"

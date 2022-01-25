@@ -1,7 +1,7 @@
 import { useCartContext } from "../../context/CartContext";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Counter from "../Counter";
+import Counter from "../Counter/Counter";
 
 const ItemDetail = ({ item }) => {
   const [goCart, setGoCart] = useState(false);
@@ -31,9 +31,9 @@ const ItemDetail = ({ item }) => {
       </div>
       {!goCart ? (
         <Counter stock={item.stock} onAdd={onAdd} />
-      ) : (
-        <Link to="/Cart">Ir al carrito</Link>
-      )}
+        ) : (
+          <Link to="/Cart">Ir al carrito</Link>
+          )}
     </div>
   );
 };
