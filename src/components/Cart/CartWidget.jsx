@@ -1,15 +1,14 @@
 import { useCartContext } from "../../context/CartContext";
-import { Link } from "react-router-dom";
 
 const CartWidget = () => {
-  const { cartCounter } = useCartContext();
+  const { cartCounter, cartList } = useCartContext();
 
   return (
     <>
-      <label>
-        <i className="fas fa-shopping-cart"></i>
-      </label>
-      <div>{cartCounter()}</div>
+      <div>
+      <i className="fas fa-shopping-cart"></i>
+      <span style={{ visibility: cartList.length === 0 ? "hidden" : "visible" }}>{cartCounter()}</span>
+      </div>
     </>
   );
 };

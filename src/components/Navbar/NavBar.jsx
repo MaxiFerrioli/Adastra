@@ -19,27 +19,15 @@ export const Navbar = () => {
               alt="Logo"
             />
           </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mynavbar"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
           <div className="collapse navbar-collapse" id="mynavbar">
-            <ul className="navbar-nav me-auto">
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  Inicio
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/Cuenta" className="nav-link">
-                  Cuenta
-                </Link>
-              </li>
-              <li className="nav-item dropdown">
+            <div className="navbar-nav me-auto">
+              <Link to="/" className="nav-link">
+                Inicio
+              </Link>
+              <Link to="/Cuenta" className="nav-link">
+                Cuenta
+              </Link>
+              <div className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   to="#"
@@ -48,35 +36,25 @@ export const Navbar = () => {
                 >
                   Categorias
                 </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="/category/hoodies">
-                      Hoodies
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/category/remeras">
-                      Remeras
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/category/medias">
-                      Medias
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/category/accesorios">
-                      Accesorios
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <Link to="/Cart">
-                  <CartWidget />
-                </Link>
-              </li>
-            </ul>
+                <nav className="dropdown-menu">
+                  <NavLink className="dropdown-item" to="/category/hoodies">
+                    Hoodies
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/category/remeras">
+                    Remeras
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/category/medias">
+                    Medias
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/category/accesorios">
+                    Accesorios
+                  </NavLink>
+                </nav>
+              </div>
+              <NavLink to="/Cart" className="nav-link">
+                <CartWidget />
+              </NavLink>
+            </div>
           </div>
         </div>
       </nav>

@@ -1,9 +1,11 @@
 import { useCartContext } from "../../context/CartContext";
+import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Counter from "../Counter/Counter";
 
 const ItemDetail = ({ item }) => {
+  const navigate = useNavigate();
   const [goCart, setGoCart] = useState(false);
   const { addToCart } = useCartContext();
 
@@ -13,27 +15,31 @@ const ItemDetail = ({ item }) => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        margin: "20px",
-      }}
-    >
+    <div>
       <div>
-        <img width={600} src={item.img} alt="img" style={{ margin: "10px" }} />
+        <img src={item.img} alt="img"/>
       </div>
-      <div style={{ width: "50%" }}>
+      <div>
         <h2>{item.name}</h2>
         <h3>$ {item.price}</h3>
-        <h4 style={{ width: "70%" }}>{item.description}</h4>
-        <Link to="/">Volver al home</Link>
+        <h4>{item.description}</h4>
       </div>
       {!goCart ? (
-        <Counter stock={item.stock} onAdd={onAdd} />
-        ) : (
-          <Link to="/Cart">Ir al carrito</Link>
-          )}
+        <>
+          {item.stock > 0 ? (
+            <>
+              <Counter stock={item.stock} onAdd={onAdd} />
+            </>
+          ) : (
+            <Button onClick={() => {navigate("/");}}>Seguir comprando</Button>)
+            }
+        </>
+      ) : (
+        <>
+          <Button onClick={() => {navigate("/")}}>Seguir comprando</Button>
+          <Button onClick={() => {navigate("/Cart")}}>Ir al carrito</Button>
+        </>
+      )}
     </div>
   );
 };

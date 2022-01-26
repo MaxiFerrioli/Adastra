@@ -2,8 +2,9 @@ import {collection, getFirestore, getDocs, query, where} from "firebase/firestor
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemList from "./ItemList";
+import Loader from "./Loader";
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
   const { id } = useParams();
@@ -20,7 +21,7 @@ const ItemListContainer = () => {
       .finally(() => setLoading(false));
   }, [id]);
 
-  return <>{loading ? <h2>Cargando...</h2> : <ItemList items={items}/>}</>;
+  return <>{loading ? (<Loader textLoad='Cargando productos'/>) : <ItemList items={items}/>}</>;
 };
 
 export default ItemListContainer;

@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Counter = ({ stock, onAdd }) => {
+  const navigate = useNavigate();
   const [number, setNumber] = useState(1);
 
   const add = () => {
@@ -15,11 +17,20 @@ const Counter = ({ stock, onAdd }) => {
       <p>{number}</p>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div>
-        <button onClick={substract}>-</button>
-        <button onClick={add} disabled={number === stock}>+</button>
+          <button onClick={substract}>-</button>
+          <button onClick={add} disabled={number === stock}>
+            +
+          </button>
         </div>
         <button disabled={number === 0} onClick={() => onAdd(number)}>
           Agregar al carrito
+        </button>
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Seguir comprando
         </button>
       </div>
     </div>
