@@ -1,12 +1,8 @@
-Edit in JSFiddle
-Result
 HTML
 CSS
 JavaScript
 Resources
-/* ==========================================
-    FOR DEMO PURPOSE
-  ========================================== */
+
 body {
   background: #2a2e32;
 }
@@ -37,11 +33,3 @@ a:hover, a:focus {
 footer {
   background: #212529;
 }
-
-
-/* ==========================================
-    CUSTOM UTILS CLASSES
-  ========================================== */
-  body, html {
-    height: 100%;
-  }

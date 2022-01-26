@@ -1,5 +1,4 @@
 import "./App.css";
-import Cart from "./components/Cart/Cart";
 import Cuenta from "./pages/Cuenta";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
@@ -8,6 +7,7 @@ import React from "react";
 import CartContextProvider from "./context/CartContext";
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 import ItemListContainer from "./components/ItemList/ItemListContainer";
+import CartContainer from "./components/Cart/CartContainer";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
             <Route path="/cuenta" element={<Cuenta />} />
             <Route path="/category/:id" element={<ItemListContainer/>} />
             <Route path="/item/:id" element={<ItemDetailContainer/>} />
-            <Route path="/cart" element={<Cart/>} />
+            <Route path="/CartItemList" element={<CartContainer/>} />
           </Routes>
           <Footer />
         </BrowserRouter>

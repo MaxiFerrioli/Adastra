@@ -1,0 +1,30 @@
+.containerDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    min-height: 70vh;
+}
+
+.sectionDetail {
+    width: 82%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    border: 5px double #6109d3;
+}
+
+.articleDetail {
+    margin: auto;
+}
+
+.itemDetail {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.btn--ItemDetail {
+margin: 5px;}

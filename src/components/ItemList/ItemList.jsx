@@ -1,22 +1,16 @@
 import Item from "../Item/Item";
+import "./ItemList.css";
 
 const ItemList = ({ items }) => {
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          maxWidth: "80%",
-          margin: "0 auto",
-        }}
-      >
+      <div className="positionList">
         {items.map((items) => (
           <Item key={items.id} {...items} />
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
 export default ItemList;

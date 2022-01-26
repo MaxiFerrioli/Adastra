@@ -1,20 +1,21 @@
 import SyncLoader from "react-spinners/SyncLoader";
 
 function Loader(props) {
-
   return (
-    <div>
-      <div>
-        <h5
-          style={{
-            fontSize: "30px",
-            color: "black"
-          }}
-        >
-          {props.textLoad}
-        </h5>
-        <SyncLoader/>
-      </div>
+    <div
+      className="d-flex justify-content-center mt-4 title--loader--container"
+    >
+      <h4
+        style={{
+          fontSize: "40px",
+          marginRight: "20px",
+          color: "black",
+          height: "70vh",
+        }}
+      >
+        {props.textLoad}
+      </h4>
+      <SyncLoader  className="title--loader" size={16} color="black"/>
     </div>
   );
 }

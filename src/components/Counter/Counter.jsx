@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Counter.css";
 
 const Counter = ({ stock, onAdd }) => {
   const navigate = useNavigate();
@@ -13,24 +14,24 @@ const Counter = ({ stock, onAdd }) => {
   };
 
   return (
-    <div style={{ width: "70%" }}>
-      <p>{number}</p>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <div>
-          <button onClick={substract}>-</button>
-          <button onClick={add} disabled={number === stock}>
-            +
-          </button>
-        </div>
-        <button disabled={number === 0} onClick={() => onAdd(number)}>
-          Agregar al carrito
+    <div className="containerCounter">
+      <div className="d-flex justify-content-center" role="group">
+        <button className="btn btn-outline-secondary" onClick={substract} type="button">
+          -
         </button>
-        <button
-          onClick={() => {
-            navigate("/");
-          }}
-        >
+        <button className="btn btn-outline-secondary" type="button" disabled>
+         {number}
+        </button>
+        <button className="btn btn-outline-secondary" onClick={add} disabled={number === stock} type="button">
+          +
+        </button>
+      </div>
+      <div className="btn--CounterDetail">
+        <button className="btn btn-outline-secondary btn--Counter" onClick={() => {navigate("/");}}>
           Seguir comprando
+        </button>
+        <button className="btn btn-outline-secondary" disabled={number === 0} onClick={() => onAdd(number)}>
+          Agregar al carrito
         </button>
       </div>
     </div>

@@ -1,0 +1,5 @@
+.positionList {
+    display: flex;
+    flex-wrap: wrap;
+    max-Width: 100%;
+}

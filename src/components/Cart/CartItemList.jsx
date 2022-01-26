@@ -12,8 +12,10 @@ import {
 import { Link } from 'react-router-dom';
 import { useCartContext } from "../../context/CartContext";
 import { useState } from "react";
+import './Cart.css'
+import CartItem from './CartItem';
 
-function Cart() {
+function CartItemList() {
   const [idOrder, setIdOrder] = useState("");
   const [dataForm, setDataForm] = useState({ name: "", email: "", phone: "" });
   const { cartList, clearCart, totalPrice, deleteItemCart } = useCartContext();
@@ -78,46 +80,62 @@ function Cart() {
   return (
     <>
        {/* {idOrder.length !== 0 && idOrder} */}
-        {cartList.length === 0 ? (
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    minHeight: '70vh',
-                }}
-            >
-                <h2>Aún no agregaste productos al carrito</h2>
-                <Link to="/">
-                    <button className="detail">Ir al catálogo</button>
-                </Link>
+       <h2 className="title--Cart">Carrito de compras</h2>
+            <div className="table--Container">
+                <table className="table table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th className="" scope="col"></th>
+                      <th className="" scope="col">Name</th>
+                      <th className="" scope="col">Price</th>
+                      <th className="" scope="col">Quantity</th>
+                      <th className="" scope="col">Remove</th>
+                    </tr>
+                  {cartList.map((prod) => <CartItem key={prod.id} prod={prod} />)}                    
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+                <h3 className="title--TotalPrice">Precio total: $ {totalPrice()}</h3>
+                <div className="buttons--Position">
+                  <div>
+                    <Link to="/"><button className="btn btn-outline-secondary">Volver a la tienda</button></Link> 
+                  </div>
+                  <div>
+                    <button className="btn btn-outline-secondary" onClick={clearCart}>Vaciar Carrito</button>
+                    <Link to="/checkout"><button className="btn btn-outline-secondary buttons--Finish">Finalizar compra</button></Link> 
+                  </div>
+                </div>
             </div>
-        ) : (
-            <>
-                {cartList.map((prod) => (
-                    <div key={prod.id} className="containerCart">
-                        <img src={prod.img} width={200} alt={prod.name} />
-                        <div
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'space-between',
-                                width: '300px',
-                            }}
-                        >
-                            <h3>{prod.name}</h3>
-                            <h3>{prod.price}</h3>
-                            <h3>Cantidad: {prod.cantidad}</h3>
-                            <button onClick={() => deleteItemCart(prod.id)}>X</button>
-                        </div>
-                    </div>
-                ))}
-                <button onClick={clearCart}>Vaciar Carrito</button>
-                <h3>{totalPrice()}</h3>
-            </>
-        )}
     </>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   //         <form onSubmit={generateOrder} onChange={handleChange}>
   //           <input
@@ -147,4 +165,4 @@ function Cart() {
 
   )}
 
-export default Cart;
+export default CartItemList;

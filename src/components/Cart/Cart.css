@@ -1,0 +1,67 @@
+/*CartItemList*/
+.table--Container {
+    margin: 50px;
+    border: black groove 1px;
+}
+
+.title--Cart {
+    font-size: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.title--TotalPrice {
+    font-size: 30px;
+    text-align: center;
+    margin: 30 10px;
+}
+
+.buttons--Position {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.buttons--Finish {
+    margin-left: 5px;
+}
+
+/*CartItem*/
+
+.text--Cart {
+    font-size: 1rem;
+    text-align: start;
+}
+
+.btn--Delete {
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+/*CartContainer*/
+
+.emptyCart {
+    display: flex;
+    flex-Direction: column;
+    justify-Content: center;
+    align-Items: center;
+    min-Height: 70vh;
+}
+
+/*CartWidget*/
+
+.cart--btn {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.cart--counter {
+    background-color: #706f6f;
+    color: whitesmoke;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 1px 5px;
+    position: relative;
+    right: 10px;
+    bottom: 5px;
+}
