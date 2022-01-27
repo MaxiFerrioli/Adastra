@@ -1,11 +1,11 @@
 import "./Footer.css";
-import {Link} from 'react-router-dom';
+
 export function Footer() {
   return (
     <>
       <footer className="w-100 py-4 flex-shrink-0">
         <div className="container py-4">
-          <div className="row gy-4 gx-5">
+          <div className="row gy-4 gx-5 cont-flex">
             <div className="col-lg-4 col-md-6">
               <h5 className="h1 text-white">ADASTRA</h5>
               <p className="small text-muted">
@@ -17,48 +17,13 @@ export function Footer() {
 
               </p>
             </div>
-            <div className="col-lg-2 col-md-6">
-              <h5 className="text-white mb-3">Quick links</h5>
-              <ul className="list-unstyled text-muted">
-                <li>
-                <Link to="/">Inicio</Link>
-                </li>
-                <li>
-                <Link to="/">Inicio</Link>
-                </li>
-                <li>
-                  <Link to="/">Inicio</Link>
-                </li>
-                <li>
-                  <Link to="/">Inicio</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="col-lg-2 col-md-6">
-              <h5 className="text-white mb-3">Quick links</h5>
-              <ul className="list-unstyled text-muted">
-                <li>
-                  <Link to="/detalle">Inicio</Link>
-
-                </li>
-                <li>
-                 <Link to="/">Inicio</Link>
-                </li>
-                <li>
-                  <Link to="/">Inicio</Link>
-                </li>
-                <li>
-                  <Link to="/">Inicio</Link>
-                </li>
-              </ul>
-            </div>
             <div className="col-lg-4 col-md-6">
               <h5 className="text-white mb-3">Newsletter</h5>
               <p className="small text-muted">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt.
               </p>
-              <form action="#">
+              <form>
                 <div className="input-group mb-3">
                   <input
                     className="form-control"
@@ -70,8 +35,7 @@ export function Footer() {
                   <button
                     className="btn btn-primary"
                     id="button-addon2"
-                    type="button"
-                  >
+                    type="button">
                     <i className="fas fa-paper-plane"></i>
                   </button>
                 </div>

@@ -4,28 +4,28 @@
     padding: 10px;
     border: solid 2px;
     border-radius: 10px;
-}
+};
 
 .title--resumen {
     font-size: 30px;
-}
+};
 
 .final--price {
     font-size: 22px;
-}
+};
 
 .title--formCheck {
     font-size: 30px;
-}
+};
 
 .btn--generateOrder {
     width: 50%;
-}
+};
 
 .validate--error {
     color: red;
-}
+};
 
 .form--control {
     background-color: white;
-}
+};

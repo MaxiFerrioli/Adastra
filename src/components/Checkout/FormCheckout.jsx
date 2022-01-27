@@ -116,22 +116,22 @@ function FormCheckout({ send, change }) {
               </Form.Group>
             </Row>
             <div className="text-center">
-            <button
-              type="submit"
-              disabled={
-                dataForm.name === "" ||
-                dataForm.phone === "" ||
-                dataForm.email === "" ||
-                dataForm.email !== dataForm.emailConfirm
-                ? true
-                : false || isValid === false
-              }
-              onClick={send}
-              className="btn btn-outline-secondary btn--checkout"
+              <button
+                type="submit"
+                disabled={
+                  dataForm.name === "" ||
+                  dataForm.phone === "" ||
+                  dataForm.email === "" ||
+                  dataForm.email !== dataForm.emailConfirm
+                    ? true
+                    : false || isValid === false
+                }
+                onClick={send}
+                className="btn btn-outline-secondary btn--checkout"
               >
-              Generar orden
-            </button>
-              </div>
+                Generar orden
+              </button>
+            </div>
           </Form>
         )}
       </Formik>

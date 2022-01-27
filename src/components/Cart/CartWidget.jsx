@@ -10,8 +10,7 @@ const CartWidget = () => {
         <i className="fas fa-shopping-cart cart--btn"></i>
         <span
           className="cart--counter"
-          style={{ visibility: cartList.length === 0 ? "hidden" : "visible" }}
-        >
+          style={{ visibility: cartList.length === 0 ? "hidden" : "visible" }}>
           {cartCounter()}
         </span>
       </div>

@@ -5,7 +5,6 @@ import Counter from "../Counter/Counter";
 import "./ItemDetail.css";
 import Swal from 'sweetalert2';
 
-
 const ItemDetail = ({ item }) => {
   const navigate = useNavigate();
   const [goCart, setGoCart] = useState(false);
@@ -45,10 +44,7 @@ const ItemDetail = ({ item }) => {
               ) : (
                 <button
                   className="btn btn-outline-secondary"
-                  onClick={() => {
-                    navigate("/");
-                  }}
-                >
+                  onClick={() => {navigate("/");}}>
                   Seguir comprando
                 </button>
               )}
@@ -57,18 +53,12 @@ const ItemDetail = ({ item }) => {
             <div>
               <button
                 className="btn btn-outline-secondary btn--ItemDetail"
-                onClick={() => {
-                  navigate("/");
-                }}
-              >
+                onClick={() => {navigate("/");}}>
                 Seguir comprando
               </button>
               <button
                 className="btn btn-outline-secondary btn--ItemDetail"
-                onClick={() => {
-                  navigate("/CartItemList");
-                }}
-              >
+                onClick={() => {navigate("/CartItemList");}}>
                 Ir al carrito
               </button>
             </div>

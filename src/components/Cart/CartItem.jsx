@@ -18,9 +18,8 @@ function CartItem({prod}) {
           <button
             className="btn btn-outline-danger btn--Delete"
             type="button"
-            onClick={() => deleteItemCart(prod.id)}
-          >
-            X
+            onClick={() => deleteItemCart(prod.id)}>
+              X
           </button>
         </td>
       </tr>

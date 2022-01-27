@@ -96,15 +96,8 @@ function CheckoutCart() {
     return (
       <div className="text-center">
         <h2>¡Gracias por su compra!</h2>
-        <p>
-          Número de orden: <strong>{orderId}</strong>.
-        </p>
-        <button
-          onClick={() => {
-            navigate("/");
-          }}
-          className="btn btn-outline-secondary"
-        >
+        <p>Número de orden: <strong>{orderId}</strong>.</p>
+        <button onClick={() => {navigate("/");}} className="btn btn-outline-secondary">
           Volver a la tienda
         </button>
       </div>
@@ -118,10 +111,7 @@ function CheckoutCart() {
           <h3>Aún no agregaste productos a tu carrito.</h3>
           <button
             className="btn btn-outline-secondary"
-            onClick={() => {
-              navigate("/");
-            }}
-          >
+            onClick={() => {navigate("/");}}>
             Ir al catálogo
           </button>
         </div>
