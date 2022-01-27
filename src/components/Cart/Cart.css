@@ -1,7 +1,7 @@
 /*CartItemList*/
 .table--Container {
     margin: 50px;
-    border: black groove 1px;
+    border: black solid 2px;
 }
 
 .title--Cart {

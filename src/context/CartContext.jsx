@@ -12,12 +12,23 @@ function CartContextProvider({ children }) {
       const oldQy = cartList[index].quantity;
       cartList.splice(index, 1);
       setCartList([...cartList, { ...item, quantity: item.quantity + oldQy }]);
-    } 
-    else { setCartList([...cartList, item]); }
+    } else {
+      setCartList([...cartList, item]);
+    }
   }
 
+  const [dataForm, setDataForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    emailConfirm: "",
+  });
+
   const totalPrice = () => {
-    return cartList.reduce( (acum, prod) => acum + prod.quantity * prod.price, 0 );
+    return cartList.reduce(
+      (acum, prod) => acum + prod.quantity * prod.price,
+      0
+    );
   };
 
   function clearCart() {
@@ -29,17 +40,18 @@ function CartContextProvider({ children }) {
   };
 
   const cartCounter = () => {
-    return cartList.reduce( (acum, valor)=> acum + valor.quantity, 0) 
-}
-
+    return cartList.reduce((acum, valor) => acum + valor.quantity, 0);
+  };
 
   return (
     <CartContext.Provider
       value={{
         cartList,
+        dataForm,
         addToCart,
         clearCart,
         totalPrice,
+        setDataForm,
         cartCounter,
         deleteItemCart
       }}
