@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ferrioli-app/static/css/main.f342411f.css",
-    "main.js": "/ferrioli-app/static/js/main.7212e7ae.js",
-    "static/js/787.b7afca0b.chunk.js": "/ferrioli-app/static/js/787.b7afca0b.chunk.js",
-    "static/media/logo.png": "/ferrioli-app/static/media/logo.31cd7c4769f6a289ca52.png",
-    "index.html": "/ferrioli-app/index.html",
-    "main.f342411f.css.map": "/ferrioli-app/static/css/main.f342411f.css.map",
-    "main.7212e7ae.js.map": "/ferrioli-app/static/js/main.7212e7ae.js.map",
-    "787.b7afca0b.chunk.js.map": "/ferrioli-app/static/js/787.b7afca0b.chunk.js.map"
+    "main.css": "/static/css/main.5647b2f5.css",
+    "main.js": "/static/js/main.e608cd32.js",
+    "static/js/787.b7afca0b.chunk.js": "/static/js/787.b7afca0b.chunk.js",
+    "static/media/logo.png": "/static/media/logo.31cd7c4769f6a289ca52.png",
+    "index.html": "/index.html",
+    "main.5647b2f5.css.map": "/static/css/main.5647b2f5.css.map",
+    "main.e608cd32.js.map": "/static/js/main.e608cd32.js.map",
+    "787.b7afca0b.chunk.js.map": "/static/js/787.b7afca0b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f342411f.css",
-    "static/js/main.7212e7ae.js"
+    "static/css/main.5647b2f5.css",
+    "static/js/main.e608cd32.js"
   ]
 }
