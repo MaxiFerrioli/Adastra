@@ -13,9 +13,14 @@
     width: 320px;
 }
 
-@media (max-width:578px) {
- .img--caracts {
-     width: 200px;
- }
+@media (max-width: 578px) {
+    .img--caracts {
+        width: 255px;
+    }
+}
 
+@media (max-width: 320px) {
+    .img--caracts {
+        width: 190px;
+    }
 }
