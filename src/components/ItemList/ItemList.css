@@ -1,5 +1,9 @@
-.positionList {
+.itemlist--container {
     display: flex;
     flex-wrap: wrap;
-    max-Width: 100%;
+    justify-content: space-evenly;
+    margin: 50px;
+    border: black solid 1px;
+    background-color: rgb(238, 238, 238);
 }
+

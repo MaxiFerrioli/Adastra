@@ -1,8 +1,21 @@
-.itemPosition {
+.item--container {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
+}
+
+.item--subContainer {
+    border: 1px solid #000000;
+}
+
+.img--caracts {
+    width: 320px;
+}
+
+@media (max-width:578px) {
+ .img--caracts {
+     width: 200px;
+ }
+
 }
