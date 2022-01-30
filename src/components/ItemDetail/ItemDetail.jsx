@@ -18,8 +18,8 @@ const ItemDetail = ({ item }) => {
       title: '¡Agregaste un nuevo producto!',
       text: `Agregaste: ${item.name}. Cantidad: ${quantity}.`,
       icon: 'success',
-      confirmButtonText: 'Aceptar',
-      confirmButtonColor: '#440bd4'
+      confirmButtonText: 'Aceptar', 
+      confirmButtonColor: 'rgb(61, 230, 100)'
   })
   };
 
