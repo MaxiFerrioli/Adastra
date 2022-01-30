@@ -5,7 +5,7 @@
 
 En este repositorio se encuentra un proyecto creado para el curso de React Js de Coderhouse (🔧Actualmente en mantenimiento🔨).
 
-| Dependencias| Versiones|
+| Dependencias| Versión|
 | ------ | ------ |
 | [React Js]| 17.0.2 |
 | [Bootstrap]| 5.1.3 |
