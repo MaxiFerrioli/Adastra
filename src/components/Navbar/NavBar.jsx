@@ -8,7 +8,7 @@ export const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         <div className="container-fluid text--nav">
-          <Link to="/">
+          <Link to="/home">
             <img
               src={logo}
               width="55"
@@ -28,7 +28,7 @@ export const Navbar = () => {
           <div className="collapse navbar-collapse" id="mynavbar">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <Link to="/" className="nav-link">
+                <Link to="/home" className="nav-link">
                   Inicio
                 </Link>
               </li>
