@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import "./Checkout.css";
+import "../Cart/Cart.css";
 import {
   addDoc,
   collection,
@@ -23,6 +24,7 @@ function CheckoutCart() {
     useCartContext();
   const [orderId, setOrderId] = useState();
   const navigate = useNavigate();
+
   const generateOrder = (e) => {
     e.preventDefault();
 
@@ -50,6 +52,7 @@ function CheckoutCart() {
         cartList.map((p) => p.id)
       )
     );
+
     getDocs(stockCurrent).then((resp) => {
       resp.docs.forEach((route) => {
         const item = cartList.find((items) => items.id === route.id);
@@ -79,7 +82,7 @@ function CheckoutCart() {
           title: "Productos sin stock en el carrito!",
           icon: "warning",
           confirmButtonText: "Ok",
-          confirmButtonColor: "#440bd4",
+          confirmButtonColor: "#rgb(61, 230, 100)",
         });
       }
     });
@@ -96,8 +99,15 @@ function CheckoutCart() {
     return (
       <div className="text-center">
         <h2>¡Gracias por su compra!</h2>
-        <p>Número de orden: <strong>{orderId}</strong>.</p>
-        <button onClick={() => {navigate("/");}} className="btn btn-outline-secondary">
+        <p>
+          Número de orden: <strong>{orderId}</strong>.
+        </p>
+        <button
+          onClick={() => {
+            navigate("/");
+          }}
+          className="btn btn-outline-secondary"
+        >
           Volver a la tienda
         </button>
       </div>
@@ -107,20 +117,21 @@ function CheckoutCart() {
   return (
     <>
       {cartList.length === 0 ? (
-        <div className="emptyCart">
+        <div className="container-check emptyCart">
           <h3>Aún no agregaste productos a tu carrito.</h3>
           <button
             className="btn btn-outline-secondary"
-            onClick={() => {navigate("/");}}>
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             Ir al catálogo
           </button>
         </div>
       ) : (
-        <Container className="form--cont">
-          <div>
-            <h3 className="title--resumen text-center">
-              Resumen de su compra:
-            </h3>
+        <div className="container-formCheck">
+          <div className="container-resumen">
+            <h3 className="text-center">Resumen de su compra:</h3>
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -139,13 +150,10 @@ function CheckoutCart() {
                 ))}
               </tbody>
             </Table>
-            <p className="final--price">Precio final: $ {totalPrice()}</p>
+            <p>Precio final: $ {totalPrice()}</p>
           </div>
-          <h3 className="text-center title--formCheck">
-            Completar los siguientes datos:
-          </h3>
-          <FormCheckout change={handleChange} send={generateOrder} />
-        </Container>
+            <FormCheckout change={handleChange} send={generateOrder} />
+        </div>
       )}
     </>
   );

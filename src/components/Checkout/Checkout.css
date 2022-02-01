@@ -1,31 +1,70 @@
-.form--cont {
-    margin-top: 110px;
-    margin-bottom: 110px;
+.container-formCheck {
+    background-color: rgb(255, 255, 255);
+    margin-top: 40px;
+    margin-bottom: 40px;
     padding: 10px;
-    border: solid 2px;
-    border-radius: 10px;
-};
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-.title--resumen {
-    font-size: 30px;
-};
+.container-formCheck label {
+    margin: 8px;
+}
 
-.final--price {
-    font-size: 22px;
-};
+.container-formCheck button {
+    margin-top: 15px;
+    font-weight: bold;}
 
-.title--formCheck {
-    font-size: 30px;
-};
+.container-formCheck h3 {
+    text-align: center;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(218, 216, 216);
+    text-shadow: 0 0 10px rgb(229, 211, 252);
+    margin-bottom: 15px;
 
-.btn--generateOrder {
-    width: 50%;
-};
 
-.validate--error {
+}
+
+.container-formCheck h2 {
+    text-align: center;
+    background-color: rgb(218, 216, 216);
+    text-shadow: 0 0 10px rgb(229, 211, 252);
+    font-size: 35px;
+    margin-bottom: 15px;
+
+}
+
+.container-resumen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-resumen p {
+    font-size: 1.2rem;
+}
+
+.colorError {
     color: red;
-};
+}
 
-.form--control {
-    background-color: white;
-};
+@media (max-width:1000px) {
+
+    .container-formCheck {
+        display: flex;
+        flex-direction: column;
+        min-height: 50vh;
+
+    }
+
+    .container-formCheck h3 {
+        font-size: 30px;
+    }
+    
+    .container-formCheck h2 {
+        font-size: 30px;
+    }
+}

@@ -20,17 +20,14 @@ export function Footer() {
             <div className="col-lg-4 col-md-6">
               <h5 className="text-white mb-3">Newsletter</h5>
               <p className="small text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt.
+                Si desea recibir todas las novedades de Ad astra, ingrese su email:
               </p>
               <form>
                 <div className="input-group mb-3">
                   <input
                     className="form-control"
                     type="text"
-                    placeholder="Recipient's username"
-                    aria-label="Recipient's username"
-                    aria-describedby="button-addon2"
+                    placeholder="Ej: example@hotmail.com"
                   ></input>
                   <button
                     className="btn btn-primary"

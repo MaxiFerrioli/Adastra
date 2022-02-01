@@ -1,7 +1,7 @@
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-import { Formik, ErrorMessage } from "formik";
 import { useCartContext } from "../../context/CartContext";
+import { Formik, ErrorMessage } from "formik";
+import { Row } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
 import "./Checkout.css";
 
 function FormCheckout({ send, change }) {
@@ -14,9 +14,9 @@ function FormCheckout({ send, change }) {
           let error = {};
 
           if (!dataForm.name) {
-            error.name = "Ingrese un nombre";
+            error.name = "Ingrese su nombre";
           } else if (dataForm.name.length < 3) {
-            error.name = "Nombre inválido";
+            error.name = "El nombre es inválido";
           }
 
           if (!dataForm.phone) {
@@ -26,16 +26,15 @@ function FormCheckout({ send, change }) {
               dataForm.phone
             )
           ) {
-            error.phone = "Número móvil inválido";
+            error.phone = "El número móvil es inválido";
           }
 
           if (!dataForm.email) {
-            error.email =
-              "Ingrese un email, para que podamos comunicarnos con usted.";
+            error.email = "Ingrese su email.";
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(dataForm.email)
           ) {
-            error.email = "E-mail inválido";
+            error.email = "El email es inválido";
           }
 
           return error;
@@ -43,9 +42,10 @@ function FormCheckout({ send, change }) {
       >
         {({ handleBlur, isValid }) => (
           <Form onChange={change}>
+            <h2 className="text-center">Complete con sus datos:</h2>
             <Row>
               <Form.Group className="mb-3 w-50">
-                <Form.Label htmlFor="name">Nombre:</Form.Label>
+                <Form.Label htmlFor="name">Nombre</Form.Label>
                 <Form.Control
                   type="text"
                   id="name"
@@ -54,16 +54,15 @@ function FormCheckout({ send, change }) {
                   required
                   defaultValue={dataForm.name}
                   onBlur={handleBlur}
-                  className="form--control"
                 />
                 <ErrorMessage
                   name="name"
                   component="span"
-                  className="validate--error"
+                  className="colorError"
                 />
               </Form.Group>
               <Form.Group className="mb-3 w-50">
-                <Form.Label htmlFor="phone">Teléfono:</Form.Label>
+                <Form.Label htmlFor="phone">Phone</Form.Label>
                 <Form.Control
                   type="tel"
                   id="phone"
@@ -72,66 +71,59 @@ function FormCheckout({ send, change }) {
                   required
                   defaultValue={dataForm.phone}
                   onBlur={handleBlur}
-                  className="form--control"
                 />
                 <ErrorMessage
                   name="phone"
                   component="span"
-                  className="validate--error"
+                  className="colorError"
                 />
               </Form.Group>
             </Row>
             <Row>
               <Form.Group className="mb-3 w-50">
-                <Form.Label htmlFor="email">E-mail:</Form.Label>
+                <Form.Label htmlFor="email">Email</Form.Label>
                 <Form.Control
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Ej: ejemplo@hotmail.com"
+                  placeholder="Ej: example@gmail.com"
                   required
                   defaultValue={dataForm.email}
                   onBlur={handleBlur}
-                  className="form--control"
                 />
                 <ErrorMessage
                   name="email"
                   component="span"
-                  className="validate--error"
+                  className="colorError"
                 />
               </Form.Group>
               <Form.Group className="mb-3 w-50">
-                <Form.Label className="form--label">
-                  Confirmar E-mail
-                </Form.Label>
+                <Form.Label>Repetir Email</Form.Label>
                 <Form.Control
                   type="email"
-                  name="emailConfirm"
-                  placeholder="Repetir e-mail"
+                  name="email2"
+                  placeholder="Ej: example@gmail.com"
                   required
-                  defaultValue={dataForm.emailConfirm}
+                  defaultValue={dataForm.email2}
                   onBlur={handleBlur}
-                  className="form--control"
                 />
               </Form.Group>
             </Row>
-            <div className="text-center">
-              <button
-                type="submit"
-                disabled={
-                  dataForm.name === "" ||
-                  dataForm.phone === "" ||
-                  dataForm.email === "" ||
-                  dataForm.email !== dataForm.emailConfirm
-                    ? true
-                    : false || isValid === false
-                }
-                onClick={send}
-                className="btn btn-outline-secondary btn--checkout"
-              >
-                Generar orden
-              </button>
-            </div>
+            <button
+              type="submit"
+              disabled={
+                dataForm.name === "" ||
+                dataForm.phone === "" ||
+                dataForm.email === "" ||
+                dataForm.email !== dataForm.email2
+                  ? true
+                  : false || isValid === false
+              }
+              onClick={send}
+              className="btn btn-outline-secondary w-100"
+            >
+              Generar orden
+            </button>
           </Form>
         )}
       </Formik>
