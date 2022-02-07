@@ -3,19 +3,21 @@ import "./Item.css";
 
 const Item = ({ img, price, id, name }) => {
   return (
-    <div className="card text-dark bg-light item--container">
-      <div className="item--subContainer">
-        <Link className="card-img-top cont--img" to={`/item/${id}`}>
-          <img src={img} alt="producto" className="img--caracts" />
-        </Link>
-        <div className="card-header">$ {price}</div>
-        <div className="card-body">
-          <h5 className="card-title">{name}</h5>
-          <Link className="btn btn-outline-secondary" to={`/item/${id}`}>
-            Ver detalle
-          </Link>
+    <div className="item-container">
+      <section>
+        <div className="img-container">
+          <img src={img} className="img-caracts"></img>
+          <div className="middle">
+            <Link to={`/item/${id}`}>
+              <button className="go-to-detail">Ver detalle</button>
+            </Link>
+          </div>
         </div>
-      </div>
+        <div>
+          <h5 className="">{name}</h5>
+          <div className="">$ {price}</div>
+        </div>
+      </section>
     </div>
   );
 };

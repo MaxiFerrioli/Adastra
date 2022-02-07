@@ -24,13 +24,13 @@ const ItemDetail = ({ item }) => {
   };
 
   return (
-    <div className="containerDetail">
-      <section className="sectionDetail">
-        <div>
-          <img width="600px" src={item.img} alt="img" />
-        </div>
-        <article className="articleDetail">
-          <div className="itemDetail">
+    <div className="container-detail">
+      <section className="section-detail">
+        <article>
+          <img src={item.img} alt="img" />
+        </article>
+        <article className="article-detail">
+          <div className="item-detail">
             <h2>{item.name}</h2>
             <h3>$ {item.price}</h3>
             <h4>{item.description}</h4>
@@ -52,12 +52,12 @@ const ItemDetail = ({ item }) => {
           ) : (
             <div>
               <button
-                className="btn btn-outline-secondary btn--ItemDetail"
+                className="btn btn-outline-secondary"
                 onClick={() => {navigate("/");}}>
                 Seguir comprando
               </button>
               <button
-                className="btn btn-outline-secondary btn--ItemDetail"
+                className="btn btn-outline-secondary"
                 onClick={() => {navigate("/CartItemList");}}>
                 Ir al carrito
               </button>

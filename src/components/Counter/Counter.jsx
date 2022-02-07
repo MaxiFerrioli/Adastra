@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Counter.css";
 
 const Counter = ({ stock, onAdd }) => {
   const navigate = useNavigate();
@@ -14,26 +13,47 @@ const Counter = ({ stock, onAdd }) => {
   };
 
   return (
-    <div className="containerCounter">
-      <div className="d-flex justify-content-center" role="group">
-        <button className="btn btn-outline-secondary" onClick={substract} type="button">
-          -
-        </button>
-        <button className="btn btn-outline-secondary" type="button" disabled>
-         {number}
-        </button>
-        <button className="btn btn-outline-secondary" onClick={add} disabled={number === stock} type="button">
-          +
-        </button>
-      </div>
-      <div className="btn--CounterDetail">
-        <button className="btn btn-outline-secondary btn--Counter" onClick={() => {navigate("/");}}>
-          Seguir comprando
-        </button>
-        <button className="btn btn-outline-secondary" disabled={number === 0} onClick={() => onAdd(number)}>
+    <div className="container-counter">
+      <div className="subcontainer-counter">
+        <div className="container-signs" role="group">
+          <button className="number-counter" type="button" disabled>
+            {number}
+          </button>
+          <span className="sign-counter">
+            <button
+              className="sign-button"
+              onClick={add}
+              disabled={number === stock}
+              type="button"
+            >
+              +
+            </button>
+            <button
+              className="sign-button"
+              onClick={substract}
+              disabled={number === 0}
+              type="button"
+            >
+              -
+            </button>
+          </span>
+        </div>
+        <button
+          className="btn-add"
+          disabled={number === 0}
+          onClick={() => onAdd(number)}
+        >
           Agregar al carrito
         </button>
       </div>
+      <button
+        className="btn-back"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        Seguir comprando
+      </button>
     </div>
   );
 };

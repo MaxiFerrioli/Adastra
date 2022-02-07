@@ -6,6 +6,57 @@ import "./Navbar.css";
 export const Navbar = () => {
   return (
     <>
+      <div className="container-slider">
+        <div className="slider">
+          <div className="slider-track">
+            <div className="slide">
+              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+            </div>
+            <div className="slide">
+              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
+            </div>
+            <div className="slide">
+              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+            </div>
+            <div className="slide">
+              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
+            </div>
+            <div className="slide">
+              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+            </div>
+            <div className="slide">
+              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
+            </div>
+            <div className="slide">
+              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+            </div>
+            <div className="slide">
+              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
+            </div>
+            <div className="slide">
+              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+            </div>
+            <div className="slide">
+              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
+            </div>
+            <div className="slide">
+              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+            </div>
+            <div className="slide">
+              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
+            </div>
+            <div className="slide">
+              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+            </div>
+            <div className="slide">
+              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
+            </div>
+            <div className="slide">
+              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
         <div className="container-fluid text--nav">
           <Link to="/">
