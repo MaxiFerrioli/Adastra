@@ -8,51 +8,42 @@ export const Navbar = () => {
     <>
       <div className="container-slider">
         <div className="slider">
-          <div className="slider-track">
-            <div className="slide">
-              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+          <div class="marquee-inner">
+            <div class="marquee-content">
+              <span>ENVÍO GRATIS A PARTIR DE $1.199 </span>
+              <span>
+                PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
+              </span>
+              <span>ENVÍO GRATIS A PARTIR DE $1.199 </span>
+              <span>
+                PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
+              </span>
+              <span>ENVÍO GRATIS A PARTIR DE $1.199 </span>
+              <span>
+                PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
+              </span>
+              <span>ENVÍO GRATIS A PARTIR DE $1.199 </span>
+              <span>
+                PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
+              </span>
             </div>
-            <div className="slide">
-              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
-            </div>
-            <div className="slide">
-              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
-            </div>
-            <div className="slide">
-              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
-            </div>
-            <div className="slide">
-              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
-            </div>
-            <div className="slide">
-              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
-            </div>
-            <div className="slide">
-              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
-            </div>
-            <div className="slide">
-              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
-            </div>
-            <div className="slide">
-              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
-            </div>
-            <div className="slide">
-              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
-            </div>
-            <div className="slide">
-              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
-            </div>
-            <div className="slide">
-              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
-            </div>
-            <div className="slide">
-              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
-            </div>
-            <div className="slide">
-              <span>3 Y 6 CUOTAS SIN INTERÉS CON VISA Y MASTER</span>
-            </div>
-            <div className="slide">
-              <span>ENVÍOS GRATIS A PARTIR DE $1500</span>
+            <div class="marquee-content clone">
+              <span>ENVÍO GRATIS A PARTIR DE $1.199</span>
+              <span>
+                PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
+              </span>
+              <span>ENVÍO GRATIS A PARTIR DE $1.199</span>
+              <span>
+                PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
+              </span>
+              <span>ENVÍO GRATIS A PARTIR DE $1.199</span>
+              <span>
+                PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
+              </span>
+              <span>ENVÍO GRATIS A PARTIR DE $1.199 </span>
+              <span>
+                PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
+              </span>
             </div>
           </div>
         </div>
