@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ItemCounter from "../Counter/ItemCounter/ItemCounter";
 import "./Item.css";
 
 const Item = ({ img, price, id, name }) => {
@@ -14,8 +15,10 @@ const Item = ({ img, price, id, name }) => {
           </div>
         </div>
         <div>
+          <div>
           <h5 className="">{name}</h5>
-          <div className="">$ {price}</div>
+          <div className="item-price">$ {price}</div>
+          </div>
         </div>
       </section>
     </div>

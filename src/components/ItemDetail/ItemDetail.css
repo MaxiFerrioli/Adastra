@@ -8,7 +8,7 @@
 .container-signs {
     display: flex;
     border: rgb(202, 202, 202) solid 1px;
-    margin: 10px;
+    margin: 5px;
 }
 
 .subcontainer-counter {
@@ -20,8 +20,8 @@
     border: none;
     padding: 20px;
     color: black;
-    font-size: 1.1rem;
-    width: 60px;
+    font-size: 1rem;
+    width: 40px;
 }
 
 .sign-counter {
@@ -36,16 +36,73 @@
     background-color: white;
     border: none;
     color: rgb(0, 0, 0);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .btn-add {
-    padding: 20px 25px;
-    background-color: rgb(20, 20, 20);
+    padding: 20px;
+    background-color: rgb(34, 34, 34);
     color: white;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.btn-add:hover {
+    color: rgb(161, 161, 161);
+}
+
+.btn-back {
+    font-size: 13px;
+    border: 0px;
+    background-color: white;
+    text-align: left;
+}
+
+.btn-back:hover {
+    opacity: 0.7;
 }
 
 /*Item Detail*/
 
+.container-detail {
+    padding: 60px;
+}
+
+.section-detail {
+    display: flex;
+    justify-content: center;
+}
+
+.article-detail {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.section-detail img {
+    width: 600px;
+}
+
+.item-detail h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Source Serif 4', sans-serif;
+}
+
+.item-detail h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.item-detail .container-description {
+    margin: 20px 0;
+}
+
+.item-detail .container-description h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}

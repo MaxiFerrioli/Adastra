@@ -5,11 +5,11 @@ import "./Navbar.css";
 
 export const Navbar = () => {
   return (
-    <>
+    <div className="sticky-top">
       <div className="container-slider">
         <div className="slider">
-          <div class="marquee-inner">
-            <div class="marquee-content">
+          <div className="marquee-inner">
+            <div className="marquee-content">
               <span>ENVÍO GRATIS A PARTIR DE $1.199 </span>
               <span>
                 PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
@@ -27,7 +27,7 @@ export const Navbar = () => {
                 PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
               </span>
             </div>
-            <div class="marquee-content clone">
+            <div className="marquee-content clone">
               <span>ENVÍO GRATIS A PARTIR DE $1.199</span>
               <span>
                 PAGÁ EN 3 Y 6 CUOTAS SIN INTERÉS CON VISA, AMEX Y MASTER
@@ -48,7 +48,7 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
         <div className="container-fluid text--nav">
           <Link to="/">
             <img
@@ -110,7 +110,7 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 export default Navbar;

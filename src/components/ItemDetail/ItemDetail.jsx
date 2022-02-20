@@ -1,9 +1,9 @@
 import { useCartContext } from "../../context/CartContext";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Counter from "../Counter/Counter";
+import Counter from "../Counter/DetailCounter/Counter";
 import "./ItemDetail.css";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 const ItemDetail = ({ item }) => {
   const navigate = useNavigate();
@@ -13,14 +13,14 @@ const ItemDetail = ({ item }) => {
   const onAdd = (quantity) => {
     setGoCart(true);
     addToCart({ ...item, quantity: quantity });
-    
+
     Swal.fire({
-      title: '¡Agregaste un nuevo producto!',
+      title: "¡Agregaste un nuevo producto!",
       text: `Agregaste: ${item.name}. Cantidad: ${quantity}.`,
-      icon: 'success',
-      confirmButtonText: 'Aceptar', 
-      confirmButtonColor: 'rgb(61, 230, 100)'
-  })
+      icon: "success",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "rgb(61, 230, 100)",
+    });
   };
 
   return (
@@ -33,36 +33,58 @@ const ItemDetail = ({ item }) => {
           <div className="item-detail">
             <h2>{item.name}</h2>
             <h3>$ {item.price}</h3>
-            <h4>{item.description}</h4>
+            <div className="container-description">
+              <h4>Descripción:</h4>
+              <label>{item.description}</label>
+            </div>
+            <ul>
+              <li>Descripción y cuidados</li>
+              <li>Cambios y devoluciones</li>
+              <li>Métodos de envío</li>
+              <li>Medios de pago</li>
+              <li>Promociones</li>
+              <li>Cuotas y beneficios</li>
+            </ul>
           </div>
-          {!goCart ? (
-            <div>
-              {item.stock > 0 ? (
-                <>
-                  <Counter stock={item.stock} onAdd={onAdd} />
-                </>
-              ) : (
+          <div className="item-detail2">
+            {!goCart ? (
+              <div>
+                {item.stock > 0 ? (
+                  <>
+                    <Counter stock={item.stock} onAdd={onAdd} />
+                  </>
+                ) : (
+                  <button
+                    className="btn btn-outline-secondary"
+                    onClick={() => {
+                      navigate("/");
+                    }}
+                  >
+                    Seguir comprando
+                  </button>
+                )}
+              </div>
+            ) : (
+              <div>
                 <button
                   className="btn btn-outline-secondary"
-                  onClick={() => {navigate("/");}}>
+                  onClick={() => {
+                    navigate("/");
+                  }}
+                >
                   Seguir comprando
                 </button>
-              )}
-            </div>
-          ) : (
-            <div>
-              <button
-                className="btn btn-outline-secondary"
-                onClick={() => {navigate("/");}}>
-                Seguir comprando
-              </button>
-              <button
-                className="btn btn-outline-secondary"
-                onClick={() => {navigate("/CartItemList");}}>
-                Ir al carrito
-              </button>
-            </div>
-          )}
+                <button
+                  className="btn btn-outline-secondary"
+                  onClick={() => {
+                    navigate("/CartItemList");
+                  }}
+                >
+                  Ir al carrito
+                </button>
+              </div>
+            )}
+          </div>
         </article>
       </section>
     </div>
