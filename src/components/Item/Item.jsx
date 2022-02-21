@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ItemCounter from "../Counter/ItemCounter/ItemCounter";
 import "./Item.css";
 
 const Item = ({ img, price, id, name }) => {
