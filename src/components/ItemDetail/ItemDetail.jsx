@@ -26,13 +26,19 @@ const ItemDetail = ({ item }) => {
   return (
     <div className="container-detail">
       <section className="section-detail">
-        <article>
+        <div className="mobile-name-price">
+          <h1>{item.name}</h1>
+          <h3>$ {item.price}</h3>
+        </div>
+        <div>
           <img src={item.img} alt="img" />
-        </article>
+        </div>
         <article className="article-detail">
           <div className="item-detail">
-            <h2>{item.name}</h2>
-            <h3>$ {item.price}</h3>
+            <div className="desktop-name-price">
+              <h2>{item.name}</h2>
+              <h3>$ {item.price}</h3>
+            </div>
             <div className="container-description">
               <h4>Descripción:</h4>
               <label>{item.description}</label>

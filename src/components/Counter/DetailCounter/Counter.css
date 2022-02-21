@@ -1,0 +1,62 @@
+.container-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-signs {
+    display: flex;
+    border: rgb(202, 202, 202) solid 1px;
+    margin: 5px;
+}
+
+.subcontainer-counter {
+    display: flex;
+    align-items: center;
+}
+
+.number-counter {
+    border: none;
+    padding: 15px;
+    color: black;
+    font-size: 1rem;
+    width: 40px;
+}
+
+.sign-counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3rem;
+    padding-right: 10px;
+}
+
+.sign-button {
+    background-color: white;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+
+.btn-add {
+    padding: 15px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.btn-add:hover {
+    color: rgb(161, 161, 161);
+}
+
+.btn-back {
+    font-size: 13px;
+    border: 0px;
+    background-color: white;
+    text-align: left;
+}
+
+.btn-back:hover {
+    opacity: 0.7;
+}
