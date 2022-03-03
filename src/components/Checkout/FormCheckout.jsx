@@ -1,7 +1,6 @@
 import { useCartContext } from "../../context/CartContext";
 import { Formik, ErrorMessage } from "formik";
-import { Row } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
+import { Row, Form } from "react-bootstrap";
 import "./Checkout.css";
 
 function FormCheckout({ send, change }) {

@@ -3,45 +3,49 @@ import "./Footer.css";
 export function Footer() {
   return (
     <>
-      <footer className="w-100 py-4 flex-shrink-0">
-        <div className="container py-4">
-          <div className="row gy-4 gx-5 cont-flex">
-            <div className="col-lg-4 col-md-6">
-              <h5 className="h1 text-white">ADASTRA</h5>
-              <p className="small text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt.
-              </p>
-              <p className="small text-muted mb-0">
-                &copy; Copyrights. All rights reserved.{" "}
-
-              </p>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <h5 className="text-white mb-3">Newsletter</h5>
-              <p className="small text-muted">
-                Si desea recibir todas las novedades de Ad astra, ingrese su email:
-              </p>
-              <form>
-                <div className="input-group mb-3">
-                  <input
-                    className="form-control"
-                    type="text"
-                    placeholder="Ej: example@hotmail.com"
-                  ></input>
-                  <button
-                    className="btn btn-primary"
-                    id="button-addon2"
-                    type="button">
-                    <i className="fas fa-paper-plane"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+      <div className="fondo_newsletter">
+        <div>
+          <h3>¡Suscribete para conocer nuestras promos y novedades!</h3>
+        </div>
+        <form className="footer-form">
+          <input
+            name="mail"
+            type="text"
+            placeholder="Ej: example@hotmail.com"
+          ></input>
+          <button id="button-addon2" type="submit">
+            <i className="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+      <div className="social-icons">
+        <a href="#">
+          <img
+            alt="Icono Instagram"
+            src="https://res.cloudinary.com/adastrashop/image/upload/v1646020733/insta_dmtckr.png"
+          ></img>
+        </a>
+        <a href="#">
+          <img
+            alt="Icono Facebook"
+            src="https://res.cloudinary.com/adastrashop/image/upload/v1646020733/facebook_m0udhr.png"
+          ></img>
+        </a>
+        <a href="#">
+          <img
+            alt="Icono Whatsapp"
+            src="https://res.cloudinary.com/adastrashop/image/upload/v1646020733/wpp_fzbypy.png"
+          ></img>
+        </a>
+      </div>
+      <footer>
+        <div className="footer-cont">
+          <h5>ADASTRA</h5>
+          <p>&copy; Copyrights. All rights reserved. </p>
         </div>
       </footer>
     </>
   );
 }
 
+export default Footer;

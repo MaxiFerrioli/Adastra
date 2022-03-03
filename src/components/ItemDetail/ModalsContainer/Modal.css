@@ -1,0 +1,77 @@
+/*MODALS*/
+.modals-container {
+  display: block;
+  margin: 35px 0;
+}
+
+.modals-container .btn-open-modal {
+  display: flex;
+  background-color: white;
+  border: none;
+  margin: 17px 0;
+}
+
+.modals-container .btn-open-modal img {
+  margin-right: 10px;
+}
+
+.img-mediosdepago {
+  width: 100%;
+  max-width: 500px;
+  min-width: 200px;
+}
+
+.modals-container .btn-open-modal:hover {
+  opacity: 0.5;
+  transition: all 1s;
+}
+
+.modals-container ul li {
+  margin: 20px 0;
+}
+
+.modals-container ul li span {
+  margin: 0 10px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal h3 {
+  width: auto;
+  border: none;
+}
+
+/*MODAL*/
+.modal-container {
+  position: fixed;
+  margin: 20px;
+  padding: 1rem;
+  min-width: 280px;
+  max-width: 650px;
+  min-height: 200px;
+  max-height: 600px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.modal-close {
+  position: absolute;
+  padding: 3px 8px;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal.is-open {
+  display: flex;
+}

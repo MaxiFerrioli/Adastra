@@ -20,7 +20,6 @@ const ItemListContainer = () => {
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [id]);
-
   return <>{loading ? (<Loader textLoad='Cargando productos'/>) : <ItemList items={items}/>}</>;
 };
 

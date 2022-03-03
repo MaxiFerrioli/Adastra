@@ -16,10 +16,19 @@ const ItemDetailContainer = () => {
       .then((resp) => setItem({ id: resp.id, ...resp.data() }))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, []);
+  }, [id]);
+
   console.log(item);
 
-  return <>{loading ? (<Loader textLoad='Cargando productos'/>) : <ItemDetail item={item} />}</>;
+  return (
+    <>
+      {loading ? (
+        <Loader textLoad="Cargando productos" />
+      ) : (
+        <ItemDetail item={item} />
+      )}
+    </>
+  );
 };
 
 export default ItemDetailContainer;

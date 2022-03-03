@@ -51,15 +51,15 @@
 /*CartWidget*/
 
 .cart--btn {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
+    color: rgb(48, 48, 48);
+    font-size: 21px;
 }
 
 .cart--counter {
     background-color: #706f6f;
-    color: whitesmoke;
-    border-radius: 50%;
-    font-size: 15px;
+    color: rgb(255, 255, 255);
+    border-radius: 60%;
+    font-size: 13px;
     padding: 1px 5px;
     position: relative;
     right: 10px;

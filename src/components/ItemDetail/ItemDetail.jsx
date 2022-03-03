@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Counter from "../Counter/DetailCounter/Counter";
 import "./ItemDetail.css";
 import Swal from "sweetalert2";
+import Modals from "./ModalsContainer/Modals";
 
 const ItemDetail = ({ item }) => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const ItemDetail = ({ item }) => {
           <h3>$ {item.price}</h3>
         </div>
         <div>
-          <img src={item.img} alt="img" />
+          <img className="img-detail" src={item.img} alt="img" />
         </div>
         <article className="article-detail">
           <div className="item-detail">
@@ -43,14 +44,7 @@ const ItemDetail = ({ item }) => {
               <h4>Descripción:</h4>
               <label>{item.description}</label>
             </div>
-            <ul>
-              <li>Descripción y cuidados</li>
-              <li>Cambios y devoluciones</li>
-              <li>Métodos de envío</li>
-              <li>Medios de pago</li>
-              <li>Promociones</li>
-              <li>Cuotas y beneficios</li>
-            </ul>
+            <Modals item={item} />
           </div>
           <div className="item-detail2">
             {!goCart ? (
@@ -61,7 +55,7 @@ const ItemDetail = ({ item }) => {
                   </>
                 ) : (
                   <button
-                    className="btn btn-outline-secondary"
+                    className=""
                     onClick={() => {
                       navigate("/");
                     }}
@@ -71,9 +65,9 @@ const ItemDetail = ({ item }) => {
                 )}
               </div>
             ) : (
-              <div>
+              <div className="container-btn-after-buy">
                 <button
-                  className="btn btn-outline-secondary"
+                  className="btn-keep-buy"
                   onClick={() => {
                     navigate("/");
                   }}
@@ -81,7 +75,7 @@ const ItemDetail = ({ item }) => {
                   Seguir comprando
                 </button>
                 <button
-                  className="btn btn-outline-secondary"
+                  className="btn-go-to-shop"
                   onClick={() => {
                     navigate("/CartItemList");
                   }}

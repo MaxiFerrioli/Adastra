@@ -1,3 +1,4 @@
+/*DETAIL*/
 .container-detail {
     padding: 60px;
 }
@@ -8,7 +9,7 @@
     flex-direction: row;
 }
 
-@media (max-width: 889px) {
+@media (max-width: 855px) {
     .container-detail {
         padding: 10px;
     }
@@ -24,7 +25,7 @@
     display: none;
 }
 
-@media (max-width: 889px) {
+@media (max-width: 855px) {
     .mobile-name-price {
         display: block
     }
@@ -37,25 +38,23 @@
 .article-detail {
     padding: 0 30px;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     max-width: 400px;
 }
 
-
 @media (max-width: 1250px) {
-    .section-detail div img {
+    .section-detail div .img-detail {
         width: 600px;
     }
 }
 
 @media (max-width: 1040px) {
-    .section-detail div img {
+    .section-detail div .img-detail {
         width: 450px;
     }
 }
 
-@media (max-width: 889px) {
+@media (max-width: 855px) {
     .article-detail {
         display: flex;
         flex-direction: column-reverse;
@@ -65,27 +64,29 @@
     }
 }
 
-@media (max-width: 470px) {
-    .section-detail div img {
-        width: 300px;
+@media (max-width: 450px) {
+    .section-detail div .img-detail {
+        width: 350px;
+    }
+}
+
+@media (max-width: 350px) {
+    .section-detail div .img-detail {
+        width: 280px;
     }
 }
 
 .item-detail h2 {
     font-size: 30px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     font-family: 'Source Serif 4', sans-serif;
 }
 
 .item-detail h3 {
-    font-size: 18px;
+    font-size: 19px;
     margin: 20px 0;
-    border: 1px solid black;
-    width: 70px;
-    text-align: center;
-    padding: 2px;
 }
 
 .item-detail .container-description {
@@ -96,4 +97,27 @@
     margin: 0;
     font-size: 16px;
     font-weight: bold;
+}
+
+.item-detail ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*btn*/
+.container-btn-after-buy {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.btn-keep-buy {
+    background-color: white;
+    border: none;
+}
+
+.btn-go-to-shop {
+    background-color: white;
+    border: none;
 }

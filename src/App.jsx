@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Footer } from "./components/Footer/Footer";
+import Navegation from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import CartContextProvider from "./context/CartContext";
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 import ItemListContainer from "./components/ItemList/ItemListContainer";
@@ -13,7 +13,7 @@ function App() {
   return (
     <CartContextProvider>
       <BrowserRouter>
-        <Navbar />
+        <Navegation />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/category/:id" element={<ItemListContainer />} />
