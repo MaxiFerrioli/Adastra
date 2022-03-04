@@ -20,15 +20,7 @@ const ItemDetailContainer = () => {
 
   console.log(item);
 
-  return (
-    <>
-      {loading ? (
-        <Loader textLoad="Cargando productos" />
-      ) : (
-        <ItemDetail item={item} />
-      )}
-    </>
-  );
+  return <>{loading ? <Loader /> : <ItemDetail item={item} />}</>;
 };
 
 export default ItemDetailContainer;

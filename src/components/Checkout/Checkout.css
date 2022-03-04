@@ -3,9 +3,9 @@
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 10px;
-    min-height: 80vh;
+    min-height: 70vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -15,32 +15,33 @@
 
 .container-formCheck button {
     margin-top: 15px;
-    font-weight: bold;}
+    font-weight: bold;
+}
 
 .container-formCheck h3 {
     text-align: center;
     font-size: 35px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(218, 216, 216);
-    text-shadow: 0 0 10px rgb(229, 211, 252);
     margin-bottom: 15px;
-
-
+    letter-spacing: 1px;
 }
 
 .container-formCheck h2 {
     text-align: center;
-    background-color: rgb(218, 216, 216);
-    text-shadow: 0 0 10px rgb(229, 211, 252);
     font-size: 35px;
+    letter-spacing: 1px;
     margin-bottom: 15px;
-
 }
 
 .container-resumen {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media (max-width: 1000px) {
+    .container-resumen {
+        margin-bottom: 50px;
+    }
 }
 
 .container-resumen p {
@@ -57,13 +58,12 @@
         display: flex;
         flex-direction: column;
         min-height: 50vh;
-
     }
 
     .container-formCheck h3 {
         font-size: 30px;
     }
-    
+
     .container-formCheck h2 {
         font-size: 30px;
     }

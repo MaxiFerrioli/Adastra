@@ -23,6 +23,8 @@
 
 .mobile-name-price {
     display: none;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 @media (max-width: 855px) {
@@ -76,7 +78,7 @@
     }
 }
 
-.item-detail h2 {
+.desktop-name-price h2 {
     font-size: 30px;
     letter-spacing: 2px;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -84,9 +86,10 @@
     font-family: 'Source Serif 4', sans-serif;
 }
 
-.item-detail h3 {
+.desktop-name-price h3 {
     font-size: 19px;
     margin: 20px 0;
+    text-align: left;
 }
 
 .item-detail .container-description {
@@ -112,12 +115,15 @@
     margin-bottom: 15px;
 }
 
-.btn-keep-buy {
-    background-color: white;
+.btn-keepb-gocart {
+    background-color: rgb(34, 34, 34);
     border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    letter-spacing: 1px;
 }
 
-.btn-go-to-shop {
-    background-color: white;
-    border: none;
+.btn-keepb-gocart:hover {
+    color: rgb(161, 161, 161);
 }

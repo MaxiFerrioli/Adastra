@@ -67,7 +67,7 @@ const ItemDetail = ({ item }) => {
             ) : (
               <div className="container-btn-after-buy">
                 <button
-                  className="btn-keep-buy"
+                  className="btn-keepb-gocart"
                   onClick={() => {
                     navigate("/");
                   }}
@@ -75,7 +75,7 @@ const ItemDetail = ({ item }) => {
                   Seguir comprando
                 </button>
                 <button
-                  className="btn-go-to-shop"
+                  className="btn-keepb-gocart"
                   onClick={() => {
                     navigate("/CartItemList");
                   }}

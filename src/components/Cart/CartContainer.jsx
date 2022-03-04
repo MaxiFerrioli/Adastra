@@ -11,12 +11,25 @@ function CartContainer() {
     <>
       {cartList.length === 0 ? (
         <div className="emptyCart">
+          <div>
+            <img
+              alt="Carrito vacio icono"
+              src="https://res.cloudinary.com/adastrashop/image/upload/v1646423685/compra_bjukon.png"
+            ></img>
+          </div>
           <h3>Aún no agregaste productos a tu carrito.</h3>
-          <button className="btn btn-outline-secondary" onClick={() => {navigate("/")}}>
+          <button
+            className="btn btn-outline-dark"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             Ir al catálogo
           </button>
         </div>
-      ) : (<CartItemList />)}
+      ) : (
+        <CartItemList />
+      )}
     </>
   );
 }

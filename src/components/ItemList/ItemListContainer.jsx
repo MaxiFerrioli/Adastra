@@ -1,4 +1,10 @@
-import {collection, getFirestore, getDocs, query, where} from "firebase/firestore";
+import {
+  collection,
+  getFirestore,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemList from "./ItemList";
@@ -16,11 +22,13 @@ const ItemListContainer = () => {
       : query(collection(db, "items"));
 
     getDocs(queryCollection)
-      .then((resp) => setItems(resp.docs.map((item) => ({ id: item.id, ...item.data() }))))
+      .then((resp) =>
+        setItems(resp.docs.map((item) => ({ id: item.id, ...item.data() })))
+      )
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [id]);
-  return <>{loading ? (<Loader textLoad='Cargando productos'/>) : <ItemList items={items}/>}</>;
+  return <>{loading ? <Loader /> : <ItemList items={items} />}</>;
 };
 
 export default ItemListContainer;

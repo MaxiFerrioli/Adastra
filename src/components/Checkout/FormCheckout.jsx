@@ -119,7 +119,7 @@ function FormCheckout({ send, change }) {
                   : false || isValid === false
               }
               onClick={send}
-              className="btn btn-outline-secondary w-100"
+              className="btn btn-outline-dark w-100"
             >
               Generar orden
             </button>

@@ -117,9 +117,15 @@ function CheckoutCart() {
     <>
       {cartList.length === 0 ? (
         <div className="container-check emptyCart">
+          <div>
+            <img
+              alt="Carrito vacio icono"
+              src="https://res.cloudinary.com/adastrashop/image/upload/v1646423685/compra_bjukon.png"
+            ></img>
+          </div>
           <h3>Aún no agregaste productos a tu carrito.</h3>
           <button
-            className="btn btn-outline-secondary"
+            className="btn btn-outline-dark"
             onClick={() => {
               navigate("/");
             }}
@@ -151,7 +157,7 @@ function CheckoutCart() {
             </Table>
             <p>Precio final: $ {totalPrice()}</p>
           </div>
-            <FormCheckout change={handleChange} send={generateOrder} />
+          <FormCheckout change={handleChange} send={generateOrder} />
         </div>
       )}
     </>

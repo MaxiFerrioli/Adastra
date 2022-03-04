@@ -51,6 +51,7 @@ span {
 .social-icons a img {
   max-width: 110px;
   margin: 15px 0;
+  width: auto;
 }
 
 @media (max-width:410px) {
