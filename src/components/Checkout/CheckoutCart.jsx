@@ -1,5 +1,4 @@
 import FormCheckout from "./FormCheckout";
-import Table from "react-bootstrap/Table";
 import Swal from "sweetalert2";
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
@@ -135,28 +134,6 @@ function CheckoutCart() {
         </div>
       ) : (
         <div className="container-formCheck">
-          <div className="container-resumen">
-            <h3 className="text-center">Resumen de su compra:</h3>
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Cantidad</th>
-                  <th>Precio</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cartList.map((item) => (
-                  <tr key={item.id}>
-                    <td>{item.name}</td>
-                    <td>x{item.quantity}</td>
-                    <td>$ {item.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-            <p>Precio final: $ {totalPrice()}</p>
-          </div>
           <FormCheckout change={handleChange} send={generateOrder} />
         </div>
       )}

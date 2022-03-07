@@ -4,44 +4,56 @@ import CartItem from "./CartItem";
 import "./Cart.css";
 
 function CartItemList() {
-  const { cartList, clearCart, totalPrice } = useCartContext();
+  const { cartList, clearCart, totalPrice, cartCounter } = useCartContext();
 
   return (
     <>
-      <h2 className="title-cart">Carrito de compras</h2>
-      <div className="table-container">
-        <table className="table table-striped table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Vista previa</th>
-              <th className="th-desktop" scope="col">Categoría</th>
-              <th scope="col">Precio</th>
-              <th scope="col">Cantidad</th>
-              <th scope="col">Quitar</th>
-            </tr>
-            {cartList.map((prod) => (
-              <CartItem key={prod.id} prod={prod} />
-            ))}
-          </thead>
-        </table>
-        <h3 className="title-total-price">Precio total: $ {totalPrice()}</h3>
-        <div className="btn-position">
+      <h2 className="title-cart">TU CARRITO</h2>
+      <div className="container-cartitemlist">
+        <div className="subcontainer-cartitemlist">
+          {cartList.map((prod) => (
+            <CartItem key={prod.id} prod={prod} />
+          ))}
           <div>
-            <Link to="/">
-              <button className="btn-back-shop">
-                <img alt="Volver" title="Volver" src="https://res.cloudinary.com/adastrashop/image/upload/v1646420619/volver_qd3wkz.png"></img>
-              </button>
-            </Link>
+            <h3 className="title-total-price">
+              Precio total: $ {totalPrice()}
+            </h3>
+            <div className="btn-position">
+              <div>
+                <button className="btn-clear-cart" onClick={clearCart}>
+                  Vaciar carrito
+                </button>
+                <Link to="/checkoutCart">
+                  <button className="btn-finish">Ir a pagar</button>
+                </Link>
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="container-resumen-cil">
+          <Link to="/checkoutCart">
+            <button className="btn-finish">Ir a pagar</button>
+          </Link>
           <div>
-            <button className="btn-clear-cart" onClick={clearCart}>
-              Vaciar Carrito
-            </button>
-            <Link to="/checkoutCart">
-              <button className="btn-finish">
-                Finalizar compra
-              </button>
-            </Link>
+            <h5>RESUMEN DEL PEDIDO</h5>
+            <div className="resumen-cil1">
+              <span>Productos:</span>
+              <span>{cartCounter()}</span>
+            </div>
+            <div className="resumen-cil2">
+              <span>Entrega:</span>
+              <span>Gratis</span>
+            </div>
+            <div className="resumen-cil3">
+              <span>Total:</span>
+              <span>$ {totalPrice()}</span>
+            </div>
+            <div>
+              <input
+                className="input-code-promo"
+                placeholder="Código promocional"
+              ></input>
+            </div>
           </div>
         </div>
       </div>

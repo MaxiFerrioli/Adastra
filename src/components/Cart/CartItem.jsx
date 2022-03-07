@@ -6,26 +6,32 @@ function CartItem({ prod }) {
 
   return (
     <>
-      <tr key={prod.id}>
-        <td>
+      <div className="container-cartitem" key={prod.id}>
+        <div>
           <img className="img-cart" src={prod.img} alt={prod.name} />
-        </td>
-        <td className="td-desktop">{prod.category}</td>
-        <td>$ {prod.price}</td>
-        <td>x {prod.quantity}</td>
-        <td>
-          <button
-            className="icon-delete-item"
-            type="button"
-            onClick={() => deleteItemCart(prod.id)}
-          >
-            <img
-              alt="delete item"
-              src="https://res.cloudinary.com/adastrashop/image/upload/v1646420974/tacho-de-basura_rrkbnf.png"
-            ></img>
-          </button>
-        </td>
-      </tr>
+        </div>
+        <div className="details-cartitem">
+          <div className="name-and-delete">
+            <div>{prod.name}</div>
+            <button
+              className="icon-delete-item"
+              type="button"
+              onClick={() => deleteItemCart(prod.id)}
+            >
+              <img
+                alt="delete item"
+                src="https://res.cloudinary.com/adastrashop/image/upload/v1646587971/eliminar-cruz_ls6dgy.png"
+              ></img>
+            </button>
+          </div>
+          <div className="quantity-cartitem">
+            <span>Cantidad:</span> {prod.quantity}
+          </div>
+          <div className="price-cartitem">
+            <b>$ {prod.price}</b>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
