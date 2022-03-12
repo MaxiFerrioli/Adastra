@@ -28,7 +28,9 @@ function CartContainer() {
           </button>
         </div>
       ) : (
-        <CartItemList />
+        <div className="cartitemlist">
+          <CartItemList />
+        </div>
       )}
     </>
   );

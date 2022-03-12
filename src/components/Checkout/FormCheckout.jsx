@@ -40,8 +40,8 @@ function FormCheckout({ send, change }) {
         }}
       >
         {({ handleBlur, isValid }) => (
-          <Form onChange={change}>
-            <h2 className="text-center">Complete con sus datos:</h2>
+          <Form className="container-form" onChange={change}>
+            <h2 className="text-center">Complete con sus datos</h2>
             <Row>
               <Form.Group className="mb-3 w-50">
                 <Form.Label htmlFor="name">Nombre</Form.Label>
@@ -100,10 +100,10 @@ function FormCheckout({ send, change }) {
                 <Form.Label>Repetir Email</Form.Label>
                 <Form.Control
                   type="email"
-                  name="email2"
+                  name="emailConfirm"
                   placeholder="Ej: example@gmail.com"
                   required
-                  defaultValue={dataForm.email2}
+                  defaultValue={dataForm.emailConfirm}
                   onBlur={handleBlur}
                 />
               </Form.Group>
@@ -114,7 +114,7 @@ function FormCheckout({ send, change }) {
                 dataForm.name === "" ||
                 dataForm.phone === "" ||
                 dataForm.email === "" ||
-                dataForm.email !== dataForm.email2
+                dataForm.email !== dataForm.emailConfirm
                   ? true
                   : false || isValid === false
               }

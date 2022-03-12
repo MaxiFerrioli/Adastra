@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navegation from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import CartContextProvider from "./context/CartContext";
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
@@ -13,7 +13,7 @@ function App() {
   return (
     <CartContextProvider>
       <BrowserRouter>
-        <Navegation />
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/category/:id" element={<ItemListContainer />} />

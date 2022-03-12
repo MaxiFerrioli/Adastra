@@ -1,10 +1,106 @@
 /*NAV*/
-.text--nav {
-    font-size: 18px;
+.container-nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(183, 145, 255);
+}
+
+.container-nav .nav-logo {
+    margin: 15px;
+    width: 55px;
+    height: 50px;
+}
+
+.container-nav .nav-items .link-nav {
+    color: #000000;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 15px;
+    position: relative;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.container-nav .nav-items .link-nav:hover {
+    opacity: 1;
+}
+
+.container-nav .nav-items .link-nav::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: #000000;
+    transition: all 0.45s;
+}
+
+.container-nav .nav-items .link-nav:hover::before {
+    width: 100%;
+}
+
+.container-nav .nav-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.link-cart {
+    margin: 15px;
+}
+
+@media (max-width: 700px) {
+    .container-nav .nav-items {
+        position: absolute;
+        top: 84px;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgb(131, 106, 177);
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: all .5s;
+    }
+
+    .container-nav .nav-items a::before {
+        background: transparent;
+    }
+
+    .container-nav .nav-items.open {
+        transform: translateY(0);
+        top: 84px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    .container-nav .nav-toggle {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        color: #000000;
+        top: 40;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 }
 
 /*SLIDER*/
-
 .slider {
     background-color: rgb(207, 181, 255);
     text-align: center;

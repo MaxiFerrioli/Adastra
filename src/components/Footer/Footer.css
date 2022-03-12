@@ -4,44 +4,12 @@
   padding: 40px 0px;
 }
 
-h3 {
+.fondo_newsletter h3 {
   text-align: center;
   margin-bottom: 15px;
 }
 
-.div_mail {
-  display: flex;
-  justify-content: center;
-}
-
-.btn_mail {
-  border-width: 0;
-  background-color: white;
-  width: 400px;
-}
-
-span {
-  color: rgb(0, 0, 0);
-}
-
-.footer-form {
-  display: flex;
-  justify-content: center;
-}
-
-.footer-form input {
-  margin-right: 5px;
-  padding: 4px;
-}
-
-.footer-form button {
-  background-color: white;
-  padding: 2px 5px;
-  border-radius: 20%;
-}
-
 /*Redes sociales*/
-
 .social-icons {
   display: flex;
   justify-content: center;
@@ -65,6 +33,21 @@ span {
 }
 
 /*Footer*/
+.footer-form {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-form input {
+  margin-right: 5px;
+  padding: 4px;
+}
+
+.footer-form button {
+  background-color: white;
+  padding: 2px 5px;
+  border-radius: 20%;
+}
 
 .footer-cont {
   border-top: solid 1px rgb(199, 199, 199);
