@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ferrioli-app/static/css/main.15e423f2.css",
-    "main.js": "/ferrioli-app/static/js/main.d03f9e93.js",
+    "main.css": "/ferrioli-app/static/css/main.1a6fe2a0.css",
+    "main.js": "/ferrioli-app/static/js/main.d8e3792c.js",
     "static/js/787.65b2bc1b.chunk.js": "/ferrioli-app/static/js/787.65b2bc1b.chunk.js",
     "static/media/logo.png": "/ferrioli-app/static/media/logo.31cd7c4769f6a289ca52.png",
     "index.html": "/ferrioli-app/index.html",
-    "main.15e423f2.css.map": "/ferrioli-app/static/css/main.15e423f2.css.map",
-    "main.d03f9e93.js.map": "/ferrioli-app/static/js/main.d03f9e93.js.map",
+    "main.1a6fe2a0.css.map": "/ferrioli-app/static/css/main.1a6fe2a0.css.map",
+    "main.d8e3792c.js.map": "/ferrioli-app/static/js/main.d8e3792c.js.map",
     "787.65b2bc1b.chunk.js.map": "/ferrioli-app/static/js/787.65b2bc1b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15e423f2.css",
-    "static/js/main.d03f9e93.js"
+    "static/css/main.1a6fe2a0.css",
+    "static/js/main.d8e3792c.js"
   ]
 }
