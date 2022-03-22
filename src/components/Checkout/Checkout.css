@@ -1,10 +1,10 @@
 .container-formCheck {
-    background: linear-gradient(137.22deg, #f5e5ff 0%, #eaf1fb 47.98%, #fed4dd 100%);
+    background: linear-gradient(137.23deg, #f5e5ff 0%, #eaf1fb 47.98%, #fed4dd 100%);
     margin-bottom: 40px;
     padding: 20px 0;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .container-form {
