@@ -6,9 +6,9 @@ import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 import ItemListContainer from "./components/ItemList/ItemListContainer";
 import CartContainer from "./components/Cart/CartContainer";
 import CheckoutCart from "./components/Checkout/CheckoutCart";
-import Home from "./Home/Home";
+import Home from "./Pages/Home";
 import { Navbar } from "./components/Navbar/NavBar";
-import Products from "./Products/Products";
+import Products from "./Pages/Products";
 
 function App() {
   return (

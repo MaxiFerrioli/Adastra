@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 
-function Home() {
+function Carousel1() {
   return (
     <>
       <Carousel variant="dark">
@@ -31,4 +31,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Carousel1;

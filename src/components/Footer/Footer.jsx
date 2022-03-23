@@ -19,7 +19,7 @@ export function Footer() {
         </form>
       </div>
       <div className="social-icons">
-        <a href="#">
+        <a href="https://www.instagram.com/maxiferrioli/">
           <img
             alt="Icono Instagram"
             src="https://res.cloudinary.com/adastrashop/image/upload/v1646020733/insta_dmtckr.png"

@@ -9,7 +9,7 @@ function CartItemList() {
   return (
     <>
       <div className="title-cartitemlist">
-        <h1>TU CARRITO</h1>
+        <h1>Carrito</h1>
       </div>
       <div className="container-cartitemlist">
         <div className="subcontainer-cartitemlist">

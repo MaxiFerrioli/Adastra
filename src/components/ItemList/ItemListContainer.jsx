@@ -8,7 +8,7 @@ import {
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemList from "./ItemList";
-import Loader from "./Loader";
+import Loader from "../Loader/Loader";
 
 const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);

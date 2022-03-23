@@ -72,13 +72,13 @@ export const Navbar = () => {
           >
             Productos
           </Link>
-          <Link
+          {/* <Link
             to="/Login"
             className="link-nav"
             onClick={() => setIsOpen(!isOpen)}
           >
             Mi cuenta
-          </Link>
+          </Link> */}
           <Link
             to="/CartItemList"
             className="link-cart"

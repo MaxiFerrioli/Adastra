@@ -1,5 +1,4 @@
 .container-formCheck {
-    background: linear-gradient(137.23deg, #f5e5ff 0%, #eaf1fb 47.98%, #fed4dd 100%);
     margin-bottom: 40px;
     padding: 20px 0;
     display: flex;
@@ -8,9 +7,10 @@
 }
 
 .container-form {
-    background-color: rgb(255, 255, 255);
-    padding: 25px;
-    border: 1px solid #d3e5fd;
+    background: linear-gradient(137.22deg, #f5e5ff 0%, #b2ddeb 47.98%, #ffbecc 100%);
+    padding: 30px;
+    margin-top: 20px;
+    border: 2px solid #b7d4fa;
 }
 
 .container-formCheck label {

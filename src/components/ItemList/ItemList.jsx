@@ -1,4 +1,4 @@
-import { DropdownButton, Dropdown } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Item from "../Item/Item";
 import "./ItemList.css";
@@ -6,9 +6,7 @@ import "./ItemList.css";
 const ItemList = ({ items }) => {
   return (
     <>
-      <div className="title-itemlist">
-        <h1>PRODUCTOS</h1>
-      </div>
+      <h1 className="title-itemlist">Productos</h1>
       <Dropdown className="dropdown-itemlist">
         <Dropdown.Toggle variant="light" id="dropdown-basic">
           Filtrar por categoría
