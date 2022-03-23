@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { getFirestoreApp } from "./config/getFirestoreApp";
+import { getFirestoreApp } from "./Config/getFirestoreApp";
 
 getFirestoreApp()
 

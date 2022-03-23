@@ -20,7 +20,6 @@ li {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1600px;
-    margin: 30px auto;
 }
 
 /*Loader*/
@@ -35,4 +34,24 @@ li {
 .container-loader h4 {
     margin: 10px;
     font-size: 25px;
+}
+
+/*ItemList*/
+.title-itemlist h1 {
+    letter-spacing: 2px;
+    font-size: 50px;
+    margin: 10px;
+    font-family: serif;
+    text-align: center;
+    color: rgb(66, 66, 66);
+}
+
+.dropdown-itemlist {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.dropdown-itemlist a {
+    color: black;
 }

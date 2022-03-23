@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import CartWidget from "../Cart/CartWidget";
 import logo from "../../img/logo.png";
 import React, { useState } from "react";
-import "./Navbar.css";
+import "./NavBar.css";
 
 export const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -55,20 +55,35 @@ export const Navbar = () => {
         </div>
       </div>
       <div className="container-nav">
-        <Link to="/">
+        <Link to="/home">
           <img src={logo} className="nav-logo" alt="Logo" title="Inicio" />
         </Link>
-        <div className={`nav-items ${isOpen && "open"}`}>
-          <Link to="/" className="link-nav">
+        <div
+          className={`nav-items ${isOpen && "open"}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <Link to="/home" className="link-nav">
             Inicio
           </Link>
-          <Link to="/" className="link-nav">
+          <Link
+            to="/Products"
+            className="link-nav"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             Productos
           </Link>
-          <Link to="/" className="link-nav">
-            Contacto
+          <Link
+            to="/Login"
+            className="link-nav"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            Mi cuenta
           </Link>
-          <Link to="/CartItemList" className="link-cart">
+          <Link
+            to="/CartItemList"
+            className="link-cart"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             <CartWidget />
           </Link>
         </div>
@@ -77,7 +92,8 @@ export const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"} />
+            <i className={"fas fa-bars"} />
+            {/* <i className={click ? "fas fa-times" : "fas fa-bars"} /> */}
           </div>
         </div>
       </div>
