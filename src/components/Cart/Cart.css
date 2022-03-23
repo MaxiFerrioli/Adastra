@@ -16,7 +16,6 @@
 
 /*CartItemList*/
 .cartitemlist {
-    background: linear-gradient(to right, #f5e5ff 0%, #eaf1fb 47.98%, #fed4dd 100%);
     margin-bottom: 40px;
     padding: 20px 0;
 }
@@ -26,11 +25,13 @@
     justify-content: center;
 }
 
-.title-cart {
-    text-align: center;
+.title-cartitemlist h1 {
     letter-spacing: 2px;
+    font-size: 35px;
+    margin: 10px 0px 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-bottom: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
 }
 
 .title-total-price {

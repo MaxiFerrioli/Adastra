@@ -7,7 +7,7 @@ const ItemList = ({ items }) => {
   return (
     <>
       <div className="title-itemlist">
-        <h1>Productos</h1>
+        <h1>PRODUCTOS</h1>
       </div>
       <Dropdown className="dropdown-itemlist">
         <Dropdown.Toggle variant="light" id="dropdown-basic">

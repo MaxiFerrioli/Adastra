@@ -8,7 +8,9 @@ function CartItemList() {
 
   return (
     <>
-      <h2 className="title-cart">TU CARRITO</h2>
+      <div className="title-cartitemlist">
+        <h1>TU CARRITO</h1>
+      </div>
       <div className="container-cartitemlist">
         <div className="subcontainer-cartitemlist">
           {cartList.map((prod) => (
