@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ferrioli-app/static/css/main.b3f3cefe.css",
-    "main.js": "/ferrioli-app/static/js/main.fd4b816f.js",
-    "static/js/787.4e274aa1.chunk.js": "/ferrioli-app/static/js/787.4e274aa1.chunk.js",
-    "static/media/logo.png": "/ferrioli-app/static/media/logo.31cd7c4769f6a289ca52.png",
-    "index.html": "/ferrioli-app/index.html",
-    "main.b3f3cefe.css.map": "/ferrioli-app/static/css/main.b3f3cefe.css.map",
-    "main.fd4b816f.js.map": "/ferrioli-app/static/js/main.fd4b816f.js.map",
-    "787.4e274aa1.chunk.js.map": "/ferrioli-app/static/js/787.4e274aa1.chunk.js.map"
+    "main.css": "/Adastra/static/css/main.b3f3cefe.css",
+    "main.js": "/Adastra/static/js/main.30bb5234.js",
+    "static/js/787.4e274aa1.chunk.js": "/Adastra/static/js/787.4e274aa1.chunk.js",
+    "static/media/logo.png": "/Adastra/static/media/logo.31cd7c4769f6a289ca52.png",
+    "index.html": "/Adastra/index.html",
+    "main.b3f3cefe.css.map": "/Adastra/static/css/main.b3f3cefe.css.map",
+    "main.30bb5234.js.map": "/Adastra/static/js/main.30bb5234.js.map",
+    "787.4e274aa1.chunk.js.map": "/Adastra/static/js/787.4e274aa1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3f3cefe.css",
-    "static/js/main.fd4b816f.js"
+    "static/js/main.30bb5234.js"
   ]
 }
