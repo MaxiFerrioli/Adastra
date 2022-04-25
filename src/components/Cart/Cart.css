@@ -93,7 +93,6 @@
     margin-bottom: 10px;
     border: none;
     padding: 8px;
-
 }
 
 .container-resumen-cil .btn-finish:hover {
@@ -138,7 +137,7 @@
 
 .icon-delete-item {
     border: none;
-    background-color: #eaf1fb;
+    background-color: #fff;
 }
 
 /*CartWidget*/

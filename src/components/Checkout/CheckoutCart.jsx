@@ -95,19 +95,21 @@ function CheckoutCart() {
 
   if (orderId) {
     return (
-      <div className="text-center">
-        <h2>¡Gracias por su compra!</h2>
-        <p>
-          Número de orden: <strong>{orderId}</strong>.
-        </p>
-        <button
-          onClick={() => {
-            navigate("/");
-          }}
-          className="btn btn-outline-secondary"
-        >
-          Volver a la tienda
-        </button>
+      <div className="purchase-completed">
+        <div className="text-center">
+          <h2>¡Gracias por su compra!</h2>
+          <p>
+            Clave de la orden: <strong>{orderId}</strong>.
+          </p>
+          <button
+            onClick={() => {
+              navigate("/");
+            }}
+            className="btn btn-outline-secondary"
+          >
+            Volver a la tienda
+          </button>
+        </div>
       </div>
     );
   }

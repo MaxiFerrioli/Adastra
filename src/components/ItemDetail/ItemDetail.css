@@ -111,8 +111,7 @@
 /*btn*/
 .container-btn-after-buy {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 15px;
+    justify-content: center;
 }
 
 .btn-keepb-gocart {
@@ -120,6 +119,7 @@
     border: none;
     color: white;
     padding: 10px;
+    margin: 5px;
     margin-top: 10px;
     letter-spacing: 1px;
 }

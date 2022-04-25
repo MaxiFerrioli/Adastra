@@ -7,10 +7,10 @@
 }
 
 .container-form {
-    background: linear-gradient(137.22deg, #f5e5ff 0%, #b2ddeb 47.98%, #ffbecc 100%);
+    background-color: rgb(210, 190, 248);
     padding: 30px;
     margin-top: 20px;
-    border: 2px solid #b7d4fa;
+    border: 1px solid #b7d4fa;
 }
 
 .container-formCheck label {
@@ -30,6 +30,13 @@
 
 .colorError {
     color: red;
+}
+
+.purchase-completed {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width:1000px) {
@@ -53,10 +60,15 @@
     .container-form {
         display: flex;
         flex-direction: column;
+        padding: 20px 14px;
+        margin-top: 20px;
+
     }
 
     .container-formCheck {
         display: flex;
         flex-direction: column;
+        margin: 40px 15px;
+        padding: 20px 0;
     }
 }

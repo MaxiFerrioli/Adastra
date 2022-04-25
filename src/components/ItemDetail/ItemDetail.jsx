@@ -55,7 +55,6 @@ const ItemDetail = ({ item }) => {
                   </>
                 ) : (
                   <button
-                    className=""
                     onClick={() => {
                       navigate("/");
                     }}
